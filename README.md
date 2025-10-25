@@ -19,6 +19,7 @@ A high-end Python + Flask-based static site generator with a powerful component 
 - **Pattern Library**: Auto-generated documentation with live examples
 
 ### Modern UI
+- **5 Professional Templates**: Default, Minimalist, Tech Blog, Documentation, Portfolio
 - **Bootstrap 5**: Responsive, mobile-first design
 - **Light/Dark Mode**: User-selectable theme with persistent preference
 - **Smooth Animations**: Professional transitions and effects
@@ -56,12 +57,35 @@ uv sync
 # Basic build (uses content/ as input, outputs to site/)
 python build.py
 
+# Build with a specific template
+python build.py --template minimalist
+
 # Custom paths
 python build.py --input content --output site
 
 # Custom configuration
 python build.py --config myconfig.yaml
+
+# Combine options
+python build.py --template techblog --output myblog
 ```
+
+### Available Templates
+
+Choose from 5 beautiful, professionally designed templates:
+
+1. **Default** - Classic, professional design with Bootstrap styling
+2. **Minimalist** - Clean, spacious layout with subtle colors and elegant typography
+3. **Tech Blog** - Dark theme with neon accents, grid backgrounds, and tech-focused aesthetics
+4. **Documentation** - Professional documentation style optimized for technical content
+5. **Portfolio** - Showcase-focused design with bold typography and golden accents
+
+Each template includes:
+- Unique color schemes and typography
+- Responsive layouts optimized for their purpose
+- Full component support
+- Light and dark mode variants
+- Mobile-first responsive design
 
 ### View Your Site
 
@@ -265,6 +289,9 @@ site_name: "My Site"
 site_description: "Site description"
 site_url: "https://example.com"
 
+# Template: Choose from 'default', 'minimalist', 'techblog', 'documentation', or 'portfolio'
+template: "default"
+
 theme:
   default_mode: "light"  # or "dark"
   primary_color: "#0d6efd"
@@ -443,6 +470,12 @@ Contributions welcome! To add features or fix bugs:
 - Examples: See the `content/` directory for samples
 
 ## Changelog
+
+### Version 2.1.0 (2025-10-25)
+- **5 Professional Templates**: Default, Minimalist, Tech Blog, Documentation, Portfolio
+- Template selection via CLI (`--template`) or config file
+- Each template with unique design language and aesthetics
+- All templates fully responsive with light/dark mode support
 
 ### Version 2.0.0 (2025-01-15)
 - Complete component system with 8 components

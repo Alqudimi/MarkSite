@@ -2,6 +2,9 @@ site_name: "Static Site Generator"
 site_description: "A modern, component-based static site generator built with Flask"
 site_url: "https://example.com"
 
+# Template: Choose from 'default', 'minimalist', 'techblog', 'documentation', or 'portfolio'
+template: "default"
+
 theme:
   default_mode: "light"
   primary_color: "#0d6efd"

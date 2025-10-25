@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.metadata.title }} - {{ site_name }}{% endblock %}
+{% block description %}{{ page.metadata.description or site_description }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        {% if page.toc %}
+        <div class="col-lg-8 col-xl-7">
+        {% else %}
+        <div class="col-lg-10 col-xl-8">
+        {% endif %}
+            <article class="minimalist-article fade-in">
+                <header class="mb-5">
+                    <h1 class="minimalist-title mb-4">{{ page.metadata.title }}</h1>
+                    {% if page.metadata.description %}
+                    <p class="minimalist-subtitle text-muted">{{ page.metadata.description }}</p>
+                    {% endif %}
+                    <div class="minimalist-meta d-flex flex-wrap gap-3 mt-4">
+                        {% if page.metadata.date %}
+                        <span class="text-muted">
+                            <i class="bi bi-calendar3"></i> {{ page.metadata.date }}
+                        </span>
+                        {% endif %}
+                        {% if page.metadata.author %}
+                        <span class="text-muted">
+                            <i class="bi bi-person"></i> {{ page.metadata.author }}
+                        </span>
+                        {% endif %}
+                        {% if page.metadata.tags %}
+                        <div>
+                            {% for tag in page.metadata.tags %}
+                            <span class="badge rounded-pill bg-light text-dark border me-1">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </header>
+                
+                <div class="content-body minimalist-content">
+                    {{ page.content|safe }}
+                </div>
+            </article>
+        </div>
+        
+        {% if page.toc %}
+        <div class="col-lg-3 col-xl-2 d-none d-lg-block">
+            <div class="sticky-sidebar">
+                <div class="minimalist-toc">
+                    <h6 class="text-uppercase small text-muted mb-3 fw-bold">On this page</h6>
+                    <div class="toc-content">
+                        {{ page.toc|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

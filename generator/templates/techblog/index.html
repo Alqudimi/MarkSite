@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="techblog-hero">
+    <div class="container text-center py-5">
+        <div class="techblog-hero-badge mb-4 fade-in">
+            <i class="bi bi-stars me-2"></i>Welcome to the future
+        </div>
+        <h1 class="techblog-hero-title mb-4 fade-in" style="animation-delay: 0.1s">{{ site_name }}</h1>
+        <p class="techblog-hero-subtitle mb-5 fade-in" style="animation-delay: 0.2s">{{ site_description }}</p>
+        <div class="d-flex gap-3 justify-content-center fade-in" style="animation-delay: 0.3s">
+            <a href="/pattern-library/" class="btn techblog-btn-primary btn-lg">
+                <i class="bi bi-palette me-2"></i>View Components
+            </a>
+            {% if pages %}
+            <a href="{{ pages[0].url }}" class="btn techblog-btn-secondary btn-lg">
+                <i class="bi bi-book me-2"></i>Documentation
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="d-flex align-items-center justify-content-between">
+                <h2 class="techblog-section-title mb-0">
+                    <span class="techblog-section-icon">▶</span> Latest Articles
+                </h2>
+                <div class="techblog-section-line"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        {% for page in pages[:6] %}
+        <div class="col-md-6 col-lg-4">
+            <a href="{{ page.url }}" class="text-decoration-none">
+                <div class="techblog-card">
+                    <div class="techblog-card-header">
+                        {% if page.metadata.tags %}
+                        <span class="techblog-card-tag">{{ page.metadata.tags[0] }}</span>
+                        {% endif %}
+                        {% if page.metadata.date %}
+                        <span class="techblog-card-date">{{ page.metadata.date }}</span>
+                        {% endif %}
+                    </div>
+                    <h5 class="techblog-card-title">{{ page.metadata.title }}</h5>
+                    {% if page.metadata.description %}
+                    <p class="techblog-card-text">{{ page.metadata.description }}</p>
+                    {% endif %}
+                    <div class="techblog-card-footer">
+                        <span class="techblog-read-more">
+                            Read article <i class="bi bi-arrow-right ms-1"></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+        
+        {% if not pages %}
+        <div class="col-12 text-center py-5">
+            <div class="techblog-empty-state">
+                <i class="bi bi-inbox display-4 mb-3"></i>
+                <p class="text-muted">No pages found. Add Markdown files to the content directory and rebuild.</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

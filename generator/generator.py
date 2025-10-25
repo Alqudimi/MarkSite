@@ -13,13 +13,15 @@ from .shortcode_parser import ShortcodeParser
 
 
 class StaticSiteGenerator:
-    def __init__(self, input_dir='content', output_dir='site', config_file='config.yaml'):
+    def __init__(self, input_dir='content', output_dir='site', config_file='config.yaml', template='default'):
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
         self.config = self.load_config(config_file)
+        self.template = template
         
+        template_dir = self.get_template_directory(template)
         self.jinja_env = Environment(
-            loader=FileSystemLoader(['generator/templates', 'generator/components']),
+            loader=FileSystemLoader([template_dir, 'generator/templates', 'generator/components']),
             autoescape=select_autoescape(['html', 'xml'])
         )
         
@@ -53,11 +55,23 @@ class StaticSiteGenerator:
                 return yaml.safe_load(f)
         return self.get_default_config()
     
+    def get_template_directory(self, template):
+        available_templates = ['default', 'minimalist', 'techblog', 'documentation', 'portfolio']
+        if template not in available_templates:
+            print(f"Warning: Template '{template}' not found. Using 'default' template.")
+            template = 'default'
+        
+        if template == 'default':
+            return 'generator/templates'
+        else:
+            return f'generator/templates/{template}'
+    
     def get_default_config(self):
         return {
             'site_name': 'My Static Site',
             'site_description': 'A modern static site built with Flask',
             'site_url': 'https://example.com',
+            'template': 'default',
             'theme': {
                 'default_mode': 'light',
                 'primary_color': '#0d6efd',
@@ -224,6 +238,7 @@ class StaticSiteGenerator:
     
     def build(self):
         print(f"Building site from {self.input_dir} to {self.output_dir}...")
+        print(f"Using template: {self.template}")
         
         self.output_dir.mkdir(parents=True, exist_ok=True)
         

@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+.techblog-theme {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0a0a0a;
+    color: #e5e7eb;
+    position: relative;
+}
+
+.techblog-grid-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(52, 211, 153, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(52, 211, 153, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.techblog-navbar {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(52, 211, 153, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.techblog-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.techblog-brand:hover {
+    color: #34d399;
+}
+
+.techblog-brand-icon {
+    color: #34d399;
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.techblog-brand:hover .techblog-brand-icon {
+    transform: rotate(180deg);
+}
+
+.techblog-nav-link {
+    color: #9ca3af !important;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.techblog-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #34d399;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.techblog-nav-link:hover {
+    color: #34d399 !important;
+}
+
+.techblog-nav-link:hover::after {
+    width: 80%;
+}
+
+.techblog-icon-btn {
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    color: #34d399;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.techblog-icon-btn:hover {
+    background: rgba(52, 211, 153, 0.2);
+    border-color: #34d399;
+    color: #34d399;
+    transform: scale(1.1);
+}
+
+.techblog-main {
+    min-height: calc(100vh - 200px);
+    position: relative;
+    z-index: 1;
+}
+
+.techblog-hero {
+    padding: 100px 0;
+    position: relative;
+    background: radial-gradient(ellipse at top, rgba(52, 211, 153, 0.15), transparent 50%);
+}
+
+.techblog-hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    border-radius: 50px;
+    color: #34d399;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.techblog-hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #fff 0%, #34d399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.techblog-hero-subtitle {
+    font-size: 1.25rem;
+    color: #9ca3af;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.techblog-btn-primary {
+    background: #34d399;
+    border: none;
+    color: #0a0a0a;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 12px;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+}
+
+.techblog-btn-primary:hover {
+    background: #2dd38e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(52, 211, 153, 0.4);
+    color: #0a0a0a;
+}
+
+.techblog-btn-secondary {
+    background: transparent;
+    border: 2px solid rgba(52, 211, 153, 0.3);
+    color: #34d399;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.techblog-btn-secondary:hover {
+    background: rgba(52, 211, 153, 0.1);
+    border-color: #34d399;
+    transform: translateY(-2px);
+    color: #34d399;
+}
+
+.techblog-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.techblog-section-icon {
+    color: #34d399;
+    font-size: 1.5rem;
+}
+
+.techblog-section-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(52, 211, 153, 0.3), transparent);
+}
+
+.techblog-card {
+    background: rgba(17, 24, 39, 0.8);
+    border: 1px solid rgba(52, 211, 153, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.techblog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(52, 211, 153, 0.1), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.techblog-card:hover {
+    border-color: rgba(52, 211, 153, 0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(52, 211, 153, 0.1);
+}
+
+.techblog-card:hover::before {
+    opacity: 1;
+}
+
+.techblog-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.techblog-card-tag {
+    background: rgba(52, 211, 153, 0.1);
+    color: #34d399;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.techblog-card-date {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.techblog-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.techblog-card-text {
+    color: #9ca3af;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.techblog-card-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.techblog-read-more {
+    color: #34d399;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    display: inline-flex;
+    align-items: center;
+    transition: gap 0.3s;
+}
+
+.techblog-card:hover .techblog-read-more {
+    gap: 0.5rem;
+}
+
+.techblog-breadcrumb {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.techblog-breadcrumb a {
+    color: #9ca3af;
+    transition: color 0.2s;
+}
+
+.techblog-breadcrumb a:hover {
+    color: #34d399;
+}
+
+.techblog-article {
+    max-width: 100%;
+}
+
+.techblog-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.techblog-subtitle {
+    font-size: 1.25rem;
+    color: #9ca3af;
+    line-height: 1.6;
+}
+
+.techblog-meta {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(52, 211, 153, 0.1);
+}
+
+.techblog-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #e5e7eb;
+}
+
+.techblog-author-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #34d399, #10b981);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #0a0a0a;
+}
+
+.techblog-date {
+    color: #9ca3af;
+}
+
+.techblog-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.techblog-tag {
+    color: #34d399;
+    font-weight: 600;
+    font-size: 0.9375rem;
+}
+
+.techblog-content {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #d1d5db;
+}
+
+.techblog-content h1,
+.techblog-content h2,
+.techblog-content h3 {
+    color: #fff;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.techblog-content h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(52, 211, 153, 0.2);
+}
+
+.techblog-content a {
+    color: #34d399;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(52, 211, 153, 0.3);
+    transition: border-color 0.2s;
+}
+
+.techblog-content a:hover {
+    border-color: #34d399;
+}
+
+.techblog-content code {
+    background: rgba(52, 211, 153, 0.1);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.techblog-toc {
+    background: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgba(52, 211, 153, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.techblog-toc-title {
+    color: #34d399;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.techblog-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.techblog-toc .toc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.techblog-toc .toc-content a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.techblog-toc .toc-content a:hover {
+    color: #34d399;
+}
+
+.techblog-footer {
+    background: rgba(17, 24, 39, 0.5);
+    border-top: 1px solid rgba(52, 211, 153, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.techblog-footer-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.techblog-footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.techblog-footer-link {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.techblog-footer-link:hover {
+    color: #34d399;
+}
+
+.techblog-modal {
+    background: rgba(17, 24, 39, 0.95);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.techblog-search-input {
+    background: rgba(52, 211, 153, 0.05);
+    border: 2px solid rgba(52, 211, 153, 0.2);
+    color: #fff;
+}
+
+.techblog-search-input:focus {
+    background: rgba(52, 211, 153, 0.1);
+    border-color: #34d399;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.2);
+}
+
+.techblog-empty-state {
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+    .techblog-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .techblog-title {
+        font-size: 2rem;
+    }
+    
+    .techblog-card {
+        padding: 1.5rem;
+    }
+    
+    .techblog-footer-links {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+}

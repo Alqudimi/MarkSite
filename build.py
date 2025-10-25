@@ -35,6 +35,13 @@ Examples:
         help='Configuration file path (default: config.yaml)'
     )
     
+    parser.add_argument(
+        '--template', '-t',
+        default=None,
+        choices=['default', 'minimalist', 'techblog', 'documentation', 'portfolio'],
+        help='Template theme to use (default: from config.yaml or "default")'
+    )
+    
     args = parser.parse_args()
     
     input_path = Path(args.input)
@@ -43,10 +50,21 @@ Examples:
         sys.exit(1)
     
     try:
+        import yaml
+        template = args.template
+        if template is None:
+            if Path(args.config).exists():
+                with open(args.config, 'r', encoding='utf-8') as f:
+                    config = yaml.safe_load(f)
+                    template = config.get('template', 'default')
+            else:
+                template = 'default'
+        
         generator = StaticSiteGenerator(
             input_dir=args.input,
             output_dir=args.output,
-            config_file=args.config
+            config_file=args.config,
+            template=template
         )
         
         generator.build()

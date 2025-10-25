@@ -1,0 +1,326 @@
+.minimalist-theme {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+}
+
+.minimalist-brand {
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+    transition: opacity 0.2s;
+}
+
+.minimalist-brand:hover {
+    opacity: 0.7;
+}
+
+.minimalist-nav-link {
+    color: #666;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    padding: 0.5rem 1.25rem !important;
+    transition: color 0.2s;
+}
+
+.minimalist-nav-link:hover {
+    color: #1a1a1a;
+}
+
+.minimalist-icon-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #e5e7eb;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.minimalist-icon-btn:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    color: #1a1a1a;
+}
+
+.minimalist-main {
+    min-height: calc(100vh - 300px);
+}
+
+.minimalist-hero {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+}
+
+.minimalist-hero-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+    line-height: 1.1;
+}
+
+.minimalist-hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.minimalist-btn {
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    transition: all 0.2s;
+}
+
+.minimalist-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.minimalist-btn-outline {
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    transition: all 0.2s;
+}
+
+.minimalist-btn-outline:hover {
+    background: #1a1a1a;
+    color: white;
+}
+
+.minimalist-section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+.minimalist-card {
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.minimalist-card:hover {
+    border-color: #1a1a1a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+.minimalist-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+}
+
+.minimalist-card-text {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.minimalist-arrow-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: all 0.2s;
+}
+
+.minimalist-arrow-link:hover {
+    color: #666;
+}
+
+.minimalist-arrow-link i {
+    transition: transform 0.2s;
+}
+
+.minimalist-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+.minimalist-article {
+    max-width: 100%;
+}
+
+.minimalist-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    color: #1a1a1a;
+}
+
+.minimalist-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.minimalist-meta {
+    font-size: 0.9375rem;
+}
+
+.minimalist-content {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #374151;
+}
+
+.minimalist-content h1,
+.minimalist-content h2,
+.minimalist-content h3 {
+    color: #1a1a1a;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.minimalist-content h1 {
+    font-size: 2.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.minimalist-content h2 {
+    font-size: 2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.minimalist-content h3 {
+    font-size: 1.5rem;
+}
+
+.minimalist-content p {
+    margin-bottom: 1.5rem;
+}
+
+.minimalist-content a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s;
+}
+
+.minimalist-content a:hover {
+    opacity: 0.7;
+}
+
+.minimalist-content blockquote {
+    border-left: 3px solid #1a1a1a;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #6b7280;
+}
+
+.minimalist-toc {
+    padding: 1.5rem;
+    border-left: 2px solid #e5e7eb;
+}
+
+.minimalist-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.minimalist-toc .toc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.minimalist-toc .toc-content a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.minimalist-toc .toc-content a:hover {
+    color: #1a1a1a;
+}
+
+.minimalist-footer {
+    background: #fafafa;
+}
+
+.minimalist-link {
+    transition: opacity 0.2s;
+}
+
+.minimalist-link:hover {
+    opacity: 0.7;
+}
+
+[data-bs-theme="dark"] .minimalist-theme {
+    color: #e5e7eb;
+}
+
+[data-bs-theme="dark"] .minimalist-brand,
+[data-bs-theme="dark"] .minimalist-nav-link:hover,
+[data-bs-theme="dark"] .minimalist-title,
+[data-bs-theme="dark"] .minimalist-section-title,
+[data-bs-theme="dark"] .minimalist-card-title a,
+[data-bs-theme="dark"] .minimalist-arrow-link,
+[data-bs-theme="dark"] .minimalist-content h1,
+[data-bs-theme="dark"] .minimalist-content h2,
+[data-bs-theme="dark"] .minimalist-content h3,
+[data-bs-theme="dark"] .minimalist-content a {
+    color: #f9fafb;
+}
+
+[data-bs-theme="dark"] .minimalist-nav-link {
+    color: #9ca3af;
+}
+
+[data-bs-theme="dark"] .minimalist-hero {
+    background: linear-gradient(180deg, #111827 0%, #0d1117 100%);
+}
+
+[data-bs-theme="dark"] .minimalist-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+[data-bs-theme="dark"] .minimalist-card:hover {
+    border-color: #6b7280;
+}
+
+[data-bs-theme="dark"] .minimalist-content {
+    color: #d1d5db;
+}
+
+[data-bs-theme="dark"] .minimalist-toc {
+    border-left-color: #374151;
+}
+
+[data-bs-theme="dark"] .minimalist-footer {
+    background: #0d1117;
+}
+
+@media (max-width: 768px) {
+    .minimalist-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .minimalist-title {
+        font-size: 2rem;
+    }
+    
+    .minimalist-card {
+        padding: 1.5rem;
+    }
+}

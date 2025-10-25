@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+.documentation-theme {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+.navbar {
+    background: #fff !important;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #0f172a !important;
+    font-size: 1.125rem;
+}
+
+.nav-link {
+    color: #64748b !important;
+    font-weight: 500;
+    font-size: 0.9375rem;
+}
+
+.nav-link:hover {
+    color: #3b82f6 !important;
+}
+
+.minimalist-hero {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: white;
+    padding: 80px 0;
+}
+
+.minimalist-hero-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.minimalist-hero-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+}
+
+.minimalist-btn {
+    background: white;
+    color: #3b82f6;
+    border: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.minimalist-btn:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    color: #3b82f6;
+}
+
+.minimalist-btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.minimalist-btn-outline:hover {
+    background: white;
+    color: #3b82f6;
+}
+
+.minimalist-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    background: white;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.minimalist-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+    transform: translateY(-4px);
+}
+
+.minimalist-card-title a {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.minimalist-card-title a:hover {
+    color: #3b82f6;
+}
+
+.minimalist-arrow-link {
+    color: #3b82f6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.minimalist-arrow-link:hover {
+    color: #2563eb;
+}
+
+.minimalist-title {
+    color: #0f172a;
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.minimalist-content code {
+    font-family: 'JetBrains Mono', monospace;
+    background: #f1f5f9;
+    color: #3b82f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875em;
+    border: 1px solid #e2e8f0;
+}
+
+.minimalist-content pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    border-left: 4px solid #3b82f6;
+}
+
+.minimalist-content pre code {
+    background: transparent;
+    color: inherit;
+    border: none;
+    padding: 0;
+}
+
+.minimalist-content h1,
+.minimalist-content h2,
+.minimalist-content h3 {
+    color: #0f172a;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.minimalist-content h2 {
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+}
+
+.minimalist-content a {
+    color: #3b82f6;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.minimalist-content a:hover {
+    border-bottom-color: #3b82f6;
+}
+
+.minimalist-content blockquote {
+    border-left: 4px solid #3b82f6;
+    background: #f8fafc;
+    padding: 1rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.minimalist-toc {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.minimalist-toc h6 {
+    color: #64748b;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.minimalist-toc a {
+    color: #64748b;
+    transition: color 0.2s;
+}
+
+.minimalist-toc a:hover {
+    color: #3b82f6;
+}
+
+.minimalist-footer {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+[data-bs-theme="dark"] .documentation-theme {
+    color: #e2e8f0;
+}
+
+[data-bs-theme="dark"] .navbar {
+    background: #1e293b !important;
+    border-bottom-color: #334155;
+}
+
+[data-bs-theme="dark"] .navbar-brand {
+    color: #f1f5f9 !important;
+}
+
+[data-bs-theme="dark"] .nav-link {
+    color: #94a3b8 !important;
+}
+
+[data-bs-theme="dark"] .nav-link:hover {
+    color: #60a5fa !important;
+}
+
+[data-bs-theme="dark"] .minimalist-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-bs-theme="dark"] .minimalist-card-title a {
+    color: #f1f5f9;
+}
+
+[data-bs-theme="dark"] .minimalist-title,
+[data-bs-theme="dark"] .minimalist-content h1,
+[data-bs-theme="dark"] .minimalist-content h2,
+[data-bs-theme="dark"] .minimalist-content h3 {
+    color: #f1f5f9;
+}
+
+[data-bs-theme="dark"] .minimalist-content code {
+    background: #334155;
+    color: #60a5fa;
+    border-color: #475569;
+}
+
+[data-bs-theme="dark"] .minimalist-content blockquote {
+    background: #1e293b;
+    border-left-color: #60a5fa;
+}
+
+[data-bs-theme="dark"] .minimalist-toc {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-bs-theme="dark"] .minimalist-footer {
+    background: #0f172a;
+    border-top-color: #1e293b;
+}
+
+@media (max-width: 768px) {
+    .minimalist-hero-title {
+        font-size: 2rem;
+    }
+    
+    .minimalist-title {
+        font-size: 2rem;
+    }
+}
