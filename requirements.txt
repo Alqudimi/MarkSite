@@ -1,0 +1,29 @@
+# MarkSite - Static Site Generator Requirements
+# Python 3.11+ required
+
+# Core dependencies
+Flask>=3.1.2
+Jinja2>=3.1.4
+
+# Markdown processing
+Markdown>=3.9
+python-frontmatter>=1.1.0
+
+# Syntax highlighting
+Pygments>=2.19.2
+
+# HTML parsing
+beautifulsoup4>=4.14.2
+
+# Configuration
+PyYAML>=6.0.3
+
+# Web server (for production deployment)
+gunicorn>=23.0.0
+
+# Database support (optional - for Flask extensions)
+Flask-SQLAlchemy>=3.1.1
+psycopg2-binary>=2.9.11
+
+# Validation
+email-validator>=2.3.0
