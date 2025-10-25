@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.metadata.title }} - {{ site_name }}{% endblock %}
+{% block description %}{{ page.metadata.description or site_description }}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        {% if page.toc %}
+        <div class="col-lg-9">
+        {% else %}
+        <div class="col-lg-10 mx-auto">
+        {% endif %}
+            <article class="techblog-article fade-in">
+                <header class="mb-5">
+                    <div class="techblog-breadcrumb mb-3">
+                        <a href="/" class="text-decoration-none"><i class="bi bi-house-fill"></i> Home</a>
+                        <span class="mx-2">/</span>
+                        <span>Article</span>
+                    </div>
+                    
+                    <h1 class="techblog-title mb-3">{{ page.metadata.title }}</h1>
+                    
+                    {% if page.metadata.description %}
+                    <p class="techblog-subtitle">{{ page.metadata.description }}</p>
+                    {% endif %}
+                    
+                    <div class="techblog-meta d-flex flex-wrap gap-3 mt-4">
+                        {% if page.metadata.author %}
+                        <div class="techblog-author">
+                            <div class="techblog-author-avatar">{{ page.metadata.author[0]|upper }}</div>
+                            <span>{{ page.metadata.author }}</span>
+                        </div>
+                        {% endif %}
+                        {% if page.metadata.date %}
+                        <span class="techblog-date">
+                            <i class="bi bi-calendar3"></i> {{ page.metadata.date }}
+                        </span>
+                        {% endif %}
+                        {% if page.metadata.tags %}
+                        <div class="techblog-tags">
+                            {% for tag in page.metadata.tags %}
+                            <span class="techblog-tag">#{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </header>
+                
+                <div class="content-body techblog-content">
+                    {{ page.content|safe }}
+                </div>
+            </article>
+        </div>
+        
+        {% if page.toc %}
+        <div class="col-lg-3 d-none d-lg-block">
+            <div class="sticky-sidebar">
+                <div class="techblog-toc">
+                    <h6 class="techblog-toc-title">TABLE OF CONTENTS</h6>
+                    <div class="toc-content">
+                        {{ page.toc|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

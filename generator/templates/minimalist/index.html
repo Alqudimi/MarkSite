@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="minimalist-hero py-5">
+    <div class="container-fluid px-5 text-center py-5">
+        <h1 class="minimalist-hero-title mb-4 fade-in">{{ site_name }}</h1>
+        <p class="minimalist-hero-subtitle text-muted mb-5 fade-in" style="animation-delay: 0.2s">{{ site_description }}</p>
+        <div class="fade-in" style="animation-delay: 0.4s">
+            <a href="/pattern-library/" class="btn btn-dark btn-lg px-5 me-3 minimalist-btn">
+                View Components
+            </a>
+            {% if pages %}
+            <a href="{{ pages[0].url }}" class="btn btn-outline-dark btn-lg px-5 minimalist-btn-outline">
+                Read Documentation
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+            <h2 class="minimalist-section-title mb-5 text-center">Recent Pages</h2>
+            
+            <div class="row g-4">
+                {% for page in pages[:9] %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="minimalist-card">
+                        <h5 class="minimalist-card-title">
+                            <a href="{{ page.url }}" class="text-dark text-decoration-none">{{ page.metadata.title }}</a>
+                        </h5>
+                        {% if page.metadata.description %}
+                        <p class="minimalist-card-text text-muted">{{ page.metadata.description }}</p>
+                        {% endif %}
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            {% if page.metadata.date %}
+                            <small class="text-muted">{{ page.metadata.date }}</small>
+                            {% endif %}
+                            <a href="{{ page.url }}" class="minimalist-arrow-link">
+                                Read <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                {% if not pages %}
+                <div class="col-12 text-center py-5">
+                    <p class="text-muted">No pages found. Add Markdown files to the content directory and rebuild.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

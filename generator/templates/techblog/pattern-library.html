@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Pattern Library - {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <header class="mb-5">
+        <div class="techblog-breadcrumb mb-3">
+            <a href="/" class="text-decoration-none"><i class="bi bi-house-fill"></i> Home</a>
+            <span class="mx-2">/</span>
+            <span>Pattern Library</span>
+        </div>
+        <h1 class="techblog-title mb-3">Pattern Library</h1>
+        <p class="techblog-subtitle">A comprehensive showcase of all available components and their variants</p>
+    </header>
+
+    {% include 'pattern-library-content.html' %}
+</div>
+{% endblock %}
