@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="landing-hero">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="landing-hero-badge mb-4 animate-fade-in">
+                    <i class="bi bi-stars"></i>
+                    <span>New features available</span>
+                </div>
+                <h1 class="landing-hero-title mb-4 animate-slide-up">
+                    Build Amazing <span class="landing-hero-gradient">Websites</span> Today
+                </h1>
+                <p class="landing-hero-subtitle mb-5 animate-slide-up" style="animation-delay: 0.1s;">
+                    {{ site_description }}
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap animate-slide-up" style="animation-delay: 0.2s;">
+                    <a href="#features" class="btn landing-btn-primary">Get Started</a>
+                    <a href="/pattern-library/" class="btn landing-btn-secondary">View Components</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-5">
+    <div id="features" class="landing-section text-center">
+        <div class="landing-section-badge">Features</div>
+        <h2 class="landing-section-title">Everything You Need</h2>
+        <p class="landing-section-subtitle">Powerful features to build and grow your web presence</p>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="landing-feature-card animate-fade-in">
+                    <div class="landing-feature-icon">
+                        <i class="bi bi-rocket-takeoff"></i>
+                    </div>
+                    <h3 class="landing-feature-title">Lightning Fast</h3>
+                    <p class="landing-feature-text">Built for performance with optimized code and modern best practices.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="landing-feature-card animate-fade-in" style="animation-delay: 0.1s;">
+                    <div class="landing-feature-icon">
+                        <i class="bi bi-palette"></i>
+                    </div>
+                    <h3 class="landing-feature-title">Beautiful Design</h3>
+                    <p class="landing-feature-text">Professionally crafted templates and components for stunning results.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="landing-feature-card animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="landing-feature-icon">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h3 class="landing-feature-title">Fully Responsive</h3>
+                    <p class="landing-feature-text">Perfect experience on all devices, from mobile to desktop.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="landing-section">
+        <div class="text-center mb-5">
+            <div class="landing-section-badge">Recent</div>
+            <h2 class="landing-section-title">Latest Content</h2>
+        </div>
+        
+        <div class="row g-4">
+            {% for page in pages[:3] %}
+            <div class="col-lg-4 col-md-6">
+                <div class="landing-card animate-fade-in" style="animation-delay: {{ loop.index0 * 0.1 }}s">
+                    <div class="landing-card-body">
+                        <h3 class="landing-card-title">
+                            <a href="{{ page.url }}">{{ page.metadata.title }}</a>
+                        </h3>
+                        <p class="landing-card-text">{{ page.metadata.description|default('Discover more about this topic...') }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="landing-cta-section">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="landing-cta-title animate-fade-in">Ready to Get Started?</h2>
+                <p class="landing-cta-text animate-slide-up">Join thousands of users building amazing websites.</p>
+                <a href="#" class="btn landing-btn-white animate-slide-up" style="animation-delay: 0.1s;">Start Building Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

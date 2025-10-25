@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ site_name }}{% endblock %}
+{% block description %}{{ page.description|default(site_description) }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8">
+            <article class="landing-article animate-fade-in">
+                <div class="landing-breadcrumb mb-4">
+                    <a href="/">Home</a> / <span>{{ page.title }}</span>
+                </div>
+                
+                <h1 class="landing-title">{{ page.title }}</h1>
+                {% if page.description %}
+                <p class="landing-subtitle">{{ page.description }}</p>
+                {% endif %}
+                
+                <div class="landing-meta mb-5">
+                    <div class="d-flex align-items-center gap-3 text-muted">
+                        {% if page.author %}
+                        <span><i class="bi bi-person me-2"></i>{{ page.author }}</span>
+                        {% endif %}
+                        {% if page.date %}
+                        <span><i class="bi bi-calendar3 me-2"></i>{{ page.date }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="landing-content">
+                    {{ content|safe }}
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}

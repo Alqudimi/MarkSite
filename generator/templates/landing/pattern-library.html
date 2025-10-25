@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Pattern Library - {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="landing-hero">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="landing-hero-badge mb-4">
+                    <i class="bi bi-box-seam"></i>
+                    <span>Component Library</span>
+                </div>
+                <h1 class="landing-hero-title mb-4">Pattern Library</h1>
+                <p class="landing-hero-subtitle mb-5">Explore all available components and their variants in the Landing theme.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            {% include "pattern-library-content.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -56,7 +56,7 @@ class StaticSiteGenerator:
         return self.get_default_config()
     
     def get_template_directory(self, template):
-        available_templates = ['default', 'minimalist', 'techblog', 'documentation', 'portfolio']
+        available_templates = ['default', 'minimalist', 'techblog', 'documentation', 'portfolio', 'magazine', 'landing', 'creative', 'personalblog','inkwell','futuristic','monochrome','oasis','retrowave']
         if template not in available_templates:
             print(f"Warning: Template '{template}' not found. Using 'default' template.")
             template = 'default'

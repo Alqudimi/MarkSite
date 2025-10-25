@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Pattern Library - {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="personalblog-hero">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="personalblog-hero-badge mb-4">design components</div>
+                <h1 class="personalblog-hero-title mb-4">Pattern Library</h1>
+                <p class="personalblog-hero-subtitle mb-5">Explore all available components and styling in the Personal Blog theme.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="personalblog-section">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                {% include "pattern-library-content.html" %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

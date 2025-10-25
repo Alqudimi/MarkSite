@@ -1,0 +1,71 @@
+{% extends "futuristic/base.html" %}
+
+{% block title %}{{ site_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="futuristic-hero text-center">
+    <div class="container-fluid px-5 py-5">
+        <div class="mb-4 fade-in">
+            <span class="futuristic-hero-badge">Welcome to the Future</span>
+        </div>
+        <h1 class="futuristic-hero-title mb-4 fade-in" style="animation-delay: 0.2s">{{ site_name }}</h1>
+        <p class="futuristic-hero-subtitle text-muted mb-5 fade-in" style="animation-delay: 0.4s">{{ site_description }}</p>
+        <div class="d-flex gap-3 justify-content-center fade-in" style="animation-delay: 0.6s">
+            <a href="/pattern-library/" class="btn futuristic-btn-primary">
+                Explore Components
+            </a>
+            {% if pages %}
+            <a href="{{ pages[0].url }}" class="btn futuristic-btn-secondary">
+                Get Started
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-11 col-xl-10">
+            <h2 class="futuristic-section-title mb-5">
+                <i class="bi bi-journal-richtext futuristic-section-icon"></i>
+                <span>Recent Posts</span>
+                <span class="futuristic-section-line"></span>
+            </h2>
+            
+            <div class="row g-4">
+                {% for page in pages[:9] %}
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="futuristic-card w-100">
+                        <div class="futuristic-card-header">
+                            {% if page.metadata.tags %}
+                            <span class="futuristic-card-tag">{{ page.metadata.tags[0] }}</span>
+                            {% endif %}
+                            {% if page.metadata.date %}
+                            <small class="futuristic-card-date">{{ page.metadata.date }}</small>
+                            {% endif %}
+                        </div>
+                        <h5 class="futuristic-card-title">
+                            <a href="{{ page.url }}">{{ page.metadata.title }}</a>
+                        </h5>
+                        {% if page.metadata.description %}
+                        <p class="futuristic-card-text">{{ page.metadata.description }}</p>
+                        {% endif %}
+                        <div class="mt-auto futuristic-card-footer">
+                            <a href="{{ page.url }}" class="futuristic-read-more">
+                                Read More <i class="bi bi-arrow-right-short ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                {% if not pages %}
+                <div class="col-12 text-center py-5">
+                    <p class="futuristic-empty-state">No pages found. Add Markdown files to the content directory.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

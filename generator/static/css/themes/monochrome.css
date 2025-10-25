@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+:root {
+    --mono-black: #000000;
+    --mono-white: #FFFFFF;
+    --mono-grey: #808080;
+    --mono-light-grey: #F5F5F5;
+    --mono-dark-grey: #1A1A1A;
+    --mono-accent: #FFFF00; /* Yellow accent for contrast */
+}
+
+.monochrome-theme {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--mono-white);
+    color: var(--mono-black);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.monochrome-navbar {
+    background: var(--mono-white) !important;
+    border-bottom: 2px solid var(--mono-black);
+}
+
+.monochrome-brand {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--mono-black) !important;
+    letter-spacing: -1px;
+}
+
+.monochrome-nav-link {
+    color: var(--mono-black) !important;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.monochrome-nav-link span {
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    display: inline-block;
+}
+
+.monochrome-nav-link:hover span {
+    transform: translateY(-100%);
+}
+
+.monochrome-nav-link::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    content: ''; /* Re-using the span trick */
+}
+
+.monochrome-icon-btn {
+    border: 2px solid var(--mono-black);
+    color: var(--mono-black);
+    border-radius: 0;
+    width: 40px;
+    height: 40px;
+    transition: all 0.2s;
+}
+
+.monochrome-icon-btn:hover {
+    background-color: var(--mono-black);
+    color: var(--mono-white);
+}
+
+.monochrome-hero {
+    border-bottom: 2px solid var(--mono-black);
+    padding: 6rem 0;
+}
+
+.monochrome-hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    max-width: 900px;
+}
+
+.monochrome-hero-buttons {
+    margin-top: 2rem;
+}
+
+.monochrome-btn {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--mono-black);
+    border: 2px solid var(--mono-black);
+    padding: 0.75rem 2rem;
+    margin-right: 1rem;
+    transition: all 0.2s;
+}
+
+.monochrome-btn:hover {
+    background-color: var(--mono-black);
+    color: var(--mono-white);
+}
+
+.monochrome-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2px;
+    background-color: var(--mono-black);
+    border: 2px solid var(--mono-black);
+}
+
+.monochrome-card {
+    background-color: var(--mono-white);
+    padding: 2rem;
+    transition: all 0.3s;
+}
+
+.monochrome-card:hover {
+    background-color: var(--mono-black);
+    color: var(--mono-white);
+}
+
+.monochrome-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.monochrome-card-text {
+    opacity: 0.8;
+    color: inherit;
+}
+
+.monochrome-card-meta {
+    margin-top: 1.5rem;
+    font-weight: 500;
+    opacity: 0.6;
+    color: inherit;
+}
+
+.monochrome-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.monochrome-meta {
+    font-weight: 600;
+}
+
+.monochrome-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.monochrome-content h2, .monochrome-content h3 {
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-top: 3rem;
+}
+
+.monochrome-content a {
+    color: var(--mono-black);
+    text-decoration: none;
+    background-color: var(--mono-accent);
+    padding: 0 0.2rem;
+    transition: all 0.2s;
+}
+
+.monochrome-content a:hover {
+    background-color: var(--mono-black);
+    color: var(--mono-white);
+}
+
+.monochrome-content blockquote {
+    border: 2px solid var(--mono-black);
+    padding: 2rem;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.monochrome-footer {
+    background-color: var(--mono-light-grey);
+    border-top: 2px solid var(--mono-black);
+}
+
+.monochrome-footer-link {
+    color: var(--mono-black);
+    font-weight: 600;
+}
+
+.monochrome-modal {
+    background-color: var(--mono-white);
+    border: 2px solid var(--mono-black);
+    border-radius: 0;
+}
+
+.monochrome-search-input {
+    background-color: transparent;
+    border: 2px solid var(--mono-black);
+    border-radius: 0;
+    font-weight: 600;
+}
+.monochrome-search-input:focus {
+    background-color: var(--mono-accent);
+    color: var(--mono-black);
+    border-color: var(--mono-black);
+    box-shadow: none;
+}
+
+/* Dark Mode (Inversion) */
+[data-bs-theme="dark"] .monochrome-theme {
+    background-color: var(--mono-black);
+    color: var(--mono-white);
+}
+[data-bs-theme="dark"] .monochrome-navbar,
+[data-bs-theme="dark"] .monochrome-hero,
+[data-bs-theme="dark"] .monochrome-footer,
+[data-bs-theme="dark"] .monochrome-modal,
+[data-bs-theme="dark"] .monochrome-search-input,
+[data-bs-theme="dark"] .monochrome-icon-btn,
+[data-bs-theme="dark"] .monochrome-btn {
+    background-color: var(--mono-black) !important;
+    border-color: var(--mono-white);
+    color: var(--mono-white) !important;
+}
+[data-bs-theme="dark"] .monochrome-icon-btn:hover,
+[data-bs-theme="dark"] .monochrome-btn:hover {
+    background-color: var(--mono-white) !important;
+    color: var(--mono-black) !important;
+}
+[data-bs-theme="dark"] .monochrome-brand,
+[data-bs-theme="dark"] .monochrome-nav-link,
+[data-bs-theme="dark"] .monochrome-footer-link {
+    color: var(--mono-white) !important;
+}
+[data-bs-theme="dark"] .monochrome-grid {
+    background-color: var(--mono-white);
+    border-color: var(--mono-white);
+}
+[data-bs-theme="dark"] .monochrome-card {
+    background-color: var(--mono-black);
+    color: var(--mono-white);
+}
+[data-bs-theme="dark"] .monochrome-card:hover {
+    background-color: var(--mono-white);
+    color: var(--mono-black);
+}
+[data-bs-theme="dark"] .monochrome-content a {
+    color: var(--mono-black);
+    background-color: var(--mono-accent);
+}
+[data-bs-theme="dark"] .monochrome-content a:hover {
+    background-color: var(--mono-white);
+}
+[data-bs-theme="dark"] .monochrome-content blockquote {
+    border-color: var(--mono-white);
+}
+[data-bs-theme="dark"] .btn-close {
+    filter: invert(1);
+}

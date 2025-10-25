@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ site_name }}{% endblock %}
+{% block description %}{{ page.description|default(site_description) }}{% endblock %}
+
+{% block content %}
+<div class="creative-section">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+                <article class="creative-article animate-fade-in">
+                    <div class="creative-breadcrumb mb-4">
+                        <a href="/">Home</a> / <span>{{ page.title }}</span>
+                    </div>
+                    
+                    <h1 class="creative-title">{{ page.title }}</h1>
+                    {% if page.description %}
+                    <p class="creative-subtitle">{{ page.description }}</p>
+                    {% endif %}
+                    
+                    <div class="creative-meta mb-5">
+                        <div class="d-flex align-items-center gap-3">
+                            {% if page.author %}
+                            <div class="creative-author-badge">{{ page.author }}</div>
+                            {% endif %}
+                            {% if page.date %}
+                            <span style="color: #8d6e63;">{{ page.date }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="creative-content">
+                        {{ content|safe }}
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

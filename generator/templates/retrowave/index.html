@@ -1,0 +1,54 @@
+{% extends "retrowave/base.html" %}
+
+{% block title %}{{ site_name }} - System Online{% endblock %}
+
+{% block content %}
+<div class="retrowave-hero text-center">
+    <div class="container-fluid px-5 py-5">
+        <h1 class="retrowave-hero-title mb-4 fade-in" data-text="{{ site_name }}">{{ site_name }}</h1>
+        <p class="retrowave-hero-subtitle mx-auto mb-5 fade-in" style="animation-delay: 0.2s">{{ site_description }}</p>
+        <div class="fade-in" style="animation-delay: 0.4s">
+            <a href="/pattern-library/" class="btn retrowave-btn me-3">
+                LOAD COMPONENTS
+            </a>
+            {% if pages %}
+            <a href="{{ pages[0].url }}" class="btn retrowave-btn">
+                START TRANSMISSION
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-5 py-5">
+    <h2 class="retrowave-section-title mb-5">// LATEST_FILES</h2>
+    <div class="row g-4">
+        {% for page in pages[:6] %}
+        <div class="col-md-6 col-lg-4">
+            <a href="{{ page.url }}" class="text-decoration-none">
+                <div class="retrowave-card">
+                    <div class="retrowave-card-header">
+                        {% if page.metadata.date %}
+                        <span>{{ page.metadata.date }}</span>
+                        {% endif %}
+                        <span>[READ]</span>
+                    </div>
+                    <div class="retrowave-card-body">
+                        <h4 class="retrowave-card-title">{{ page.metadata.title }}_</h4>
+                        {% if page.metadata.description %}
+                        <p class="retrowave-card-text">{{ page.metadata.description }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+        
+        {% if not pages %}
+        <div class="col-12 text-center py-5">
+            <p class="retrowave-hero-subtitle">> NO FILES FOUND_</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

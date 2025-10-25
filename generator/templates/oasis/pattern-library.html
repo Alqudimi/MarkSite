@@ -1,0 +1,18 @@
+{% extends "oasis/base.html" %}
+
+{% block title %}Pattern Library - {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+            <header class="mb-5 text-center">
+                <h1 class="oasis-title mb-3">Pattern Library</h1>
+                <p class="oasis-subtitle">A showcase of all available components in the Oasis theme.</p>
+            </header>
+
+            {% include 'pattern-library-content.html' %}
+        </div>
+    </div>
+</div>
+{% endblock %}

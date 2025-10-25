@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="personalblog-hero">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="personalblog-hero-badge mb-4 animate-fade-in">welcome to my blog</div>
+                <h1 class="personalblog-hero-title mb-4 animate-slide-up">{{ site_name }}</h1>
+                <p class="personalblog-hero-subtitle mb-5 animate-slide-up" style="animation-delay: 0.1s;">{{ site_description }}</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap animate-slide-up" style="animation-delay: 0.2s;">
+                    <a href="#recent" class="btn personalblog-btn-primary">Read Stories</a>
+                    <a href="/pattern-library/" class="btn personalblog-btn-secondary">Components</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="personalblog-section">
+    <div class="container-fluid px-5">
+        <div id="recent" class="personalblog-section-header">
+            <h2 class="personalblog-section-title">Recent Posts</h2>
+            <div class="personalblog-divider"></div>
+            <p class="personalblog-section-subtitle">Thoughts, stories, and ideas from my journey</p>
+        </div>
+        
+        <div class="row g-4">
+            {% for page in pages[:3] %}
+            <div class="col-lg-4 col-md-6">
+                <div class="personalblog-card animate-fade-in" style="animation-delay: {{ loop.index0 * 0.1 }}s">
+                    <div class="personalblog-card-body">
+                        <div class="personalblog-card-meta">
+                            {% if page.metadata.date %}{{ page.metadata.date }}{% else %}Recent{% endif %}
+                        </div>
+                        <h3 class="personalblog-card-title">
+                            <a href="{{ page.url }}">{{ page.metadata.title }}</a>
+                        </h3>
+                        <p class="personalblog-card-text">{{ page.metadata.description|default('Read this personal story and reflection...') }}</p>
+                        <a href="{{ page.url }}" class="personalblog-read-more">
+                            <span>Read more</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

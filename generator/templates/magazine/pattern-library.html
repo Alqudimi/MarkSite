@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Pattern Library - {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="magazine-hero">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="magazine-hero-badge mb-4">Design System</div>
+                <h1 class="magazine-hero-title mb-4">Pattern Library</h1>
+                <p class="magazine-hero-subtitle mb-5">A comprehensive showcase of all available components and their variants in the Magazine theme.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            {% include "pattern-library-content.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

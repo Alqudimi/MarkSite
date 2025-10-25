@@ -1,0 +1,18 @@
+{% extends "monochrome/base.html" %}
+
+{% block title %}Pattern Library - {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <header class="mb-5">
+                <h1 class="monochrome-title">Pattern Library</h1>
+                <p class="monochrome-subtitle">A showcase of all available components in the Monochrome theme.</p>
+            </header>
+
+            {% include 'pattern-library-content.html' %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ site_name }}{% endblock %}
+{% block description %}{{ page.description|default(site_description) }}{% endblock %}
+
+{% block content %}
+<div class="personalblog-section">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+                <article class="personalblog-article animate-fade-in">
+                    <div class="personalblog-breadcrumb mb-4">
+                        <a href="/">Home</a> / <span>{{ page.title }}</span>
+                    </div>
+                    
+                    <h1 class="personalblog-title">{{ page.title }}</h1>
+                    {% if page.description %}
+                    <p class="personalblog-subtitle">{{ page.description }}</p>
+                    {% endif %}
+                    
+                    <div class="personalblog-meta mb-5">
+                        <div class="personalblog-author-info">
+                            <div class="personalblog-author-avatar">
+                                {{ page.author[0]|upper if page.author else 'A' }}
+                            </div>
+                            <div class="personalblog-author-details">
+                                <div class="personalblog-author-name">{{ page.author|default('Author') }}</div>
+                                {% if page.date %}
+                                <div class="personalblog-date">{{ page.date }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="personalblog-content">
+                        {{ content|safe }}
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

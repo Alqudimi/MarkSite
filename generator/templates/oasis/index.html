@@ -1,0 +1,59 @@
+{% extends "oasis/base.html" %}
+
+{% block title %}{{ site_name }} - Welcome{% endblock %}
+
+{% block content %}
+<div class="oasis-hero py-5">
+    <div class="container-fluid px-5 text-center py-5">
+        <h1 class="oasis-hero-title mb-4 fade-in">{{ site_name }}</h1>
+        <p class="oasis-hero-subtitle mx-auto mb-5 fade-in" style="animation-delay: 0.2s">{{ site_description }}</p>
+        <div class="fade-in" style="animation-delay: 0.4s">
+            <a href="/pattern-library/" class="btn oasis-btn-primary px-5 me-3">
+                View Components
+            </a>
+            {% if pages %}
+            <a href="{{ pages[0].url }}" class="btn oasis-btn-secondary px-5">
+                Read Articles
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+            <h2 class="oasis-section-title mb-5 text-center">Latest Posts</h2>
+            
+            <div class="row g-4">
+                {% for page in pages[:6] %}
+                <div class="col-md-6">
+                    <div class="oasis-card">
+                        <h5 class="oasis-card-title">
+                            <a href="{{ page.url }}">{{ page.metadata.title }}</a>
+                        </h5>
+                        {% if page.metadata.description %}
+                        <p class="oasis-card-text">{{ page.metadata.description }}</p>
+                        {% endif %}
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            {% if page.metadata.date %}
+                            <small class="oasis-card-date">{{ page.metadata.date }}</small>
+                            {% endif %}
+                            <a href="{{ page.url }}" class="oasis-arrow-link">
+                                Read More <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                {% if not pages %}
+                <div class="col-12 text-center py-5">
+                    <p class="text-muted">No articles found yet. Start by adding content.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

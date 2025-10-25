@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="creative-hero">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="creative-hero-badge mb-4 animate-fade-in">CREATIVE STUDIO</div>
+                <h1 class="creative-hero-title mb-4 animate-slide-up">
+                    BOLD <span class="creative-hero-accent">IDEAS</span><br>STUNNING RESULTS
+                </h1>
+                <p class="creative-hero-subtitle mb-5 animate-slide-up" style="animation-delay: 0.1s;">{{ site_description }}</p>
+                <div class="d-flex justify-content-center gap-4 flex-wrap animate-slide-up" style="animation-delay: 0.2s;">
+                    <a href="#projects" class="btn creative-btn-primary">VIEW WORK</a>
+                    <a href="/pattern-library/" class="btn creative-btn-secondary">COMPONENTS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="creative-section">
+    <div class="container-fluid px-5">
+        <div id="projects" class="creative-section-header">
+            <h2 class="creative-section-title">Latest Work</h2>
+            <p class="creative-section-subtitle">Pushing boundaries, creating excellence</p>
+        </div>
+        
+        <div class="row g-4">
+            {% for page in pages[:3] %}
+            <div class="col-lg-4 col-md-6">
+                <div class="creative-card animate-fade-in" style="animation-delay: {{ loop.index0 * 0.1 }}s">
+                    <div class="creative-card-body">
+                        <div class="creative-card-number">{{ "%02d"|format(loop.index) }}</div>
+                        <h3 class="creative-card-title">
+                            <a href="{{ page.url }}">{{ page.metadata.title }}</a>
+                        </h3>
+                        <p class="creative-card-text">{{ page.metadata.description|default('Explore this creative project...') }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

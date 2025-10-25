@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ site_name }}{% endblock %}
+{% block description %}{{ page.description|default(site_description) }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8">
+            <article class="magazine-article animate-fade-in">
+                <div class="magazine-breadcrumb mb-4">
+                    <a href="/">Home</a> / <span>{{ page.title }}</span>
+                </div>
+                
+                <h1 class="magazine-title">{{ page.title }}</h1>
+                {% if page.description %}
+                <p class="magazine-subtitle">{{ page.description }}</p>
+                {% endif %}
+                
+                <div class="magazine-meta mb-5">
+                    <div class="magazine-author-info">
+                        <div class="magazine-author-avatar">
+                            {{ page.author[0]|upper if page.author else 'A' }}
+                        </div>
+                        <div class="magazine-author-details">
+                            <div class="magazine-author-name">{{ page.author|default('Editorial Team') }}</div>
+                            {% if page.date %}
+                            <div class="magazine-publish-date">{{ page.date }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="magazine-content">
+                            {{ content|safe }}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}

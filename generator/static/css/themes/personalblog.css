@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+.personalblog-theme {
+    font-family: 'Crimson Text', Georgia, serif;
+    color: #2c1810;
+    background: #faf8f5;
+}
+
+.personalblog-navbar {
+    background: rgba(255, 248, 240, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.personalblog-brand {
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #8b4513;
+    letter-spacing: -0.01em;
+    transition: color 0.3s;
+}
+
+.personalblog-brand:hover {
+    color: #c87941;
+}
+
+.personalblog-nav-link {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #5d4037 !important;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s;
+}
+
+.personalblog-nav-link:hover {
+    color: #8b4513 !important;
+}
+
+.personalblog-icon-btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d7ccc8;
+    border-radius: 50%;
+    color: #8b4513;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.personalblog-icon-btn:hover {
+    background: #8b4513;
+    border-color: #8b4513;
+    color: #fff8f0;
+    transform: scale(1.1);
+}
+
+.personalblog-main {
+    min-height: calc(100vh - 300px);
+    background: #faf8f5;
+}
+
+.personalblog-hero {
+    padding: 100px 0 80px;
+    background: linear-gradient(180deg, #fff8f0 0%, #faf8f5 100%);
+    border-bottom: 2px solid #d7ccc8;
+}
+
+.personalblog-hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: #fff;
+    border: 2px solid #8b4513;
+    border-radius: 50px;
+    color: #8b4513;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+}
+
+.personalblog-hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #2c1810;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.personalblog-hero-subtitle {
+    font-size: 1.5rem;
+    color: #5d4037;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.personalblog-btn-primary {
+    font-family: 'Source Sans 3', sans-serif;
+    background: #8b4513;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
+}
+
+.personalblog-btn-primary:hover {
+    background: #a0522d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
+    color: #fff;
+}
+
+.personalblog-btn-secondary {
+    font-family: 'Source Sans 3', sans-serif;
+    background: transparent;
+    border: 2px solid #8b4513;
+    color: #8b4513;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.personalblog-btn-secondary:hover {
+    background: #8b4513;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.personalblog-section {
+    padding: 4rem 0;
+}
+
+.personalblog-section-header {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.personalblog-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #2c1810;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+}
+
+.personalblog-section-subtitle {
+    font-size: 1.25rem;
+    color: #5d4037;
+    font-style: italic;
+}
+
+.personalblog-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #8b4513, #c87941);
+    margin: 1.5rem 0;
+}
+
+.personalblog-card {
+    background: #fff;
+    border: 1px solid #efebe9;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.personalblog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15);
+    border-color: #c87941;
+}
+
+.personalblog-card-body {
+    padding: 2rem;
+}
+
+.personalblog-card-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8125rem;
+    color: #8d6e63;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.personalblog-card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #2c1810;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.personalblog-card-title a {
+    color: #2c1810;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.personalblog-card-title a:hover {
+    color: #8b4513;
+}
+
+.personalblog-card-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #5d4037;
+    margin-bottom: 1.5rem;
+}
+
+.personalblog-read-more {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #8b4513;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s;
+}
+
+.personalblog-read-more:hover {
+    gap: 0.75rem;
+    color: #a0522d;
+}
+
+.personalblog-article {
+    max-width: 100%;
+}
+
+.personalblog-breadcrumb {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.875rem;
+    color: #8d6e63;
+    margin-bottom: 2rem;
+}
+
+.personalblog-breadcrumb a {
+    color: #8d6e63;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.personalblog-breadcrumb a:hover {
+    color: #8b4513;
+}
+
+.personalblog-title {
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #2c1810;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.personalblog-subtitle {
+    font-size: 1.75rem;
+    color: #5d4037;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.personalblog-meta {
+    padding: 1.5rem 0;
+    border-top: 2px solid #efebe9;
+    border-bottom: 2px solid #efebe9;
+    margin-bottom: 3rem;
+}
+
+.personalblog-author-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.personalblog-author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b4513, #c87941);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.5rem;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.personalblog-author-details {
+    flex: 1;
+}
+
+.personalblog-author-name {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    color: #2c1810;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+}
+
+.personalblog-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9375rem;
+    color: #8d6e63;
+}
+
+.personalblog-content {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: #3e2723;
+}
+
+.personalblog-content h1,
+.personalblog-content h2,
+.personalblog-content h3 {
+    color: #2c1810;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.personalblog-content h1 {
+    font-size: 2.5rem;
+    border-bottom: none;
+}
+
+.personalblog-content h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #d7ccc8;
+    padding-bottom: 0.75rem;
+}
+
+.personalblog-content h3 {
+    font-size: 1.5rem;
+}
+
+.personalblog-content p {
+    margin-bottom: 1.75rem;
+}
+
+.personalblog-content a {
+    color: #8b4513;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.personalblog-content a:hover {
+    color: #c87941;
+}
+
+.personalblog-content blockquote {
+    border-left: 4px solid #8b4513;
+    padding-left: 2rem;
+    margin: 2.5rem 0;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #5d4037;
+}
+
+.personalblog-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.personalblog-toc {
+    background: #fff;
+    border: 2px solid #efebe9;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.personalblog-toc-title {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #8b4513;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.personalblog-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.personalblog-toc .toc-content li {
+    margin-bottom: 0.75rem;
+}
+
+.personalblog-toc .toc-content a {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #5d4037;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: color 0.2s;
+    display: block;
+}
+
+.personalblog-toc .toc-content a:hover {
+    color: #8b4513;
+}
+
+.personalblog-footer {
+    background: #fff8f0;
+    border-top: 2px solid #d7ccc8;
+    padding: 3rem 0 1.5rem;
+}
+
+.personalblog-footer-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #8b4513;
+}
+
+.personalblog-footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.personalblog-footer-link {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #5d4037;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.personalblog-footer-link:hover {
+    color: #8b4513;
+}
+
+.personalblog-footer-copyright {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #8d6e63;
+    font-size: 0.875rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #efebe9;
+}
+
+[data-bs-theme="dark"] .personalblog-theme {
+    background: #1a120e;
+    color: #e8d7c3;
+}
+
+[data-bs-theme="dark"] .personalblog-main {
+    background: #241812;
+}
+
+[data-bs-theme="dark"] .personalblog-navbar {
+    background: rgba(26, 18, 14, 0.95);
+    border-bottom-color: rgba(139, 69, 19, 0.3);
+}
+
+[data-bs-theme="dark"] .personalblog-hero {
+    background: linear-gradient(180deg, #2c1f18 0%, #241812 100%);
+    border-bottom-color: rgba(139, 69, 19, 0.3);
+}
+
+[data-bs-theme="dark"] .personalblog-title,
+[data-bs-theme="dark"] .personalblog-section-title,
+[data-bs-theme="dark"] .personalblog-card-title a,
+[data-bs-theme="dark"] .personalblog-content h1,
+[data-bs-theme="dark"] .personalblog-content h2,
+[data-bs-theme="dark"] .personalblog-content h3 {
+    color: #f5e6d3;
+}
+
+[data-bs-theme="dark"] .personalblog-card {
+    background: #2c1f18;
+    border-color: #3e2d23;
+}
+
+[data-bs-theme="dark"] .personalblog-content {
+    color: #d4c4b0;
+}
+
+[data-bs-theme="dark"] .personalblog-toc {
+    background: #2c1f18;
+    border-color: #3e2d23;
+}
+
+[data-bs-theme="dark"] .personalblog-footer {
+    background: #1a120e;
+}
+
+@media (max-width: 768px) {
+    .personalblog-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .personalblog-title {
+        font-size: 2.5rem;
+    }
+    
+    .personalblog-section-title {
+        font-size: 2rem;
+    }
+    
+    .personalblog-card-body {
+        padding: 1.5rem;
+    }
+    
+    .personalblog-content {
+        font-size: 1.125rem;
+    }
+    
+    .personalblog-footer-links {
+        justify-content: flex-start;
+        margin-top: 1.5rem;
+    }
+}
