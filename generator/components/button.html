@@ -1,0 +1,18 @@
+{% set btn_variant = variant|default('primary') %}
+{% set btn_size = size|default('md') %}
+{% set btn_class = 'btn btn-' ~ btn_variant %}
+{% if btn_size == 'sm' %}
+    {% set btn_class = btn_class ~ ' btn-sm' %}
+{% elif btn_size == 'lg' %}
+    {% set btn_class = btn_class ~ ' btn-lg' %}
+{% endif %}
+
+{% if href %}
+<a href="{{ href }}" class="{{ btn_class }}" {% if disabled %}aria-disabled="true"{% endif %} {% if target %}target="{{ target }}"{% endif %}>
+    {% if icon %}<i class="{{ icon }}"></i> {% endif %}{{ text|default('Button') }}
+</a>
+{% else %}
+<button type="button" class="{{ btn_class }}" {% if disabled %}disabled{% endif %}>
+    {% if icon %}<i class="{{ icon }}"></i> {% endif %}{{ text|default('Button') }}
+</button>
+{% endif %}

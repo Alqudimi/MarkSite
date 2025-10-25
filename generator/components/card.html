@@ -1,0 +1,27 @@
+{% set card_variant = variant|default('') %}
+{% set card_class = 'card h-100 shadow-sm' %}
+{% if card_variant %}
+    {% set card_class = card_class ~ ' border-' ~ card_variant %}
+{% endif %}
+
+<div class="{{ card_class }}">
+    {% if image %}
+    <img src="{{ image }}" class="card-img-top" alt="{{ title|default('Card image') }}">
+    {% endif %}
+    
+    <div class="card-body">
+        {% if title %}
+        <h5 class="card-title {% if card_variant %}text-{{ card_variant }}{% endif %}">{{ title }}</h5>
+        {% endif %}
+        
+        {% if content %}
+        <p class="card-text">{{ content }}</p>
+        {% endif %}
+    </div>
+    
+    {% if footer %}
+    <div class="card-footer {% if card_variant %}bg-{{ card_variant }} bg-opacity-10{% else %}bg-light{% endif %}">
+        {{ footer }}
+    </div>
+    {% endif %}
+</div>

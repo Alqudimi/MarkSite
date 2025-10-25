@@ -1,0 +1,13 @@
+{% set alert_variant = variant|default('info') %}
+{% set alert_class = 'alert alert-' ~ alert_variant %}
+{% if dismissible %}
+    {% set alert_class = alert_class ~ ' alert-dismissible fade show' %}
+{% endif %}
+
+<div class="{{ alert_class }}" role="alert">
+    {% if icon %}<i class="{{ icon }}"></i> {% endif %}
+    {{ content|default('Alert message') }}
+    {% if dismissible %}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {% endif %}
+</div>

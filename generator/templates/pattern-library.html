@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Pattern Library - {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-lg-12">
+            <h1 class="display-4 mb-3"><i class="bi bi-palette"></i> Component Pattern Library</h1>
+            <p class="lead text-muted">Reusable components for your Markdown content</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="sticky-sidebar">
+                <div class="list-group">
+                    {% for component in components %}
+                    <a href="#{{ component.name }}" class="list-group-item list-group-item-action">
+                        <i class="bi bi-puzzle"></i> {{ component.name|capitalize }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-9">
+            {% for component in components %}
+            <section id="{{ component.name }}" class="mb-5 pb-5 border-bottom">
+                <h2 class="mb-3">
+                    <i class="bi bi-puzzle-fill text-primary"></i> {{ component.name|capitalize }}
+                </h2>
+                <p class="lead">{{ component.description }}</p>
+                
+                <div class="card mb-4">
+                    <div class="card-header bg-light">
+                        <strong>Parameters</strong>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for param, desc in component.params.items() %}
+                                <tr>
+                                    <td><code>{{ param }}</code></td>
+                                    <td>{{ desc }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                        <strong>Usage Example</strong>
+                        <button class="btn btn-sm btn-outline-secondary copy-btn" data-copy="{{ component.example }}">
+                            <i class="bi bi-clipboard"></i> Copy
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <pre><code>{{ component.example }}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <strong>Live Preview</strong>
+                    </div>
+                    <div class="card-body">
+                        {% if component.name == 'button' %}
+                            <div class="d-flex flex-wrap gap-2">
+                                {% with text='Primary', variant='primary' %}{% include 'button.html' %}{% endwith %}
+                                {% with text='Secondary', variant='secondary' %}{% include 'button.html' %}{% endwith %}
+                                {% with text='Success', variant='success' %}{% include 'button.html' %}{% endwith %}
+                                {% with text='Danger', variant='danger' %}{% include 'button.html' %}{% endwith %}
+                                {% with text='Large', variant='primary', size='lg' %}{% include 'button.html' %}{% endwith %}
+                                {% with text='Small', variant='secondary', size='sm' %}{% include 'button.html' %}{% endwith %}
+                            </div>
+                        {% elif component.name == 'card' %}
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    {% with title='Example Card', content='This is an example card component with some content.', footer='Card footer' %}{% include 'card.html' %}{% endwith %}
+                                </div>
+                                <div class="col-md-6">
+                                    {% with title='Primary Card', content='This card has a primary variant.', variant='primary' %}{% include 'card.html' %}{% endwith %}
+                                </div>
+                            </div>
+                        {% elif component.name == 'alert' %}
+                            <div class="d-flex flex-column gap-2">
+                                {% with content='This is a primary alert!', variant='primary' %}{% include 'alert.html' %}{% endwith %}
+                                {% with content='This is a success alert!', variant='success' %}{% include 'alert.html' %}{% endwith %}
+                                {% with content='This is a warning alert!', variant='warning' %}{% include 'alert.html' %}{% endwith %}
+                                {% with content='This is a danger alert!', variant='danger' %}{% include 'alert.html' %}{% endwith %}
+                            </div>
+                        {% elif component.name == 'badge' %}
+                            <div class="d-flex flex-wrap gap-2">
+                                {% with text='Primary', variant='primary' %}{% include 'badge.html' %}{% endwith %}
+                                {% with text='Success', variant='success' %}{% include 'badge.html' %}{% endwith %}
+                                {% with text='Warning', variant='warning' %}{% include 'badge.html' %}{% endwith %}
+                                {% with text='Danger', variant='danger' %}{% include 'badge.html' %}{% endwith %}
+                                {% with text='Info', variant='info' %}{% include 'badge.html' %}{% endwith %}
+                            </div>
+                        {% elif component.name == 'hero' %}
+                            {% with title='Hero Section', subtitle='A powerful hero component for your pages', cta_text='Get Started', cta_link='#' %}{% include 'hero.html' %}{% endwith %}
+                        {% elif component.name == 'collapsible' %}
+                            {% with title='Click to expand', content='This is the hidden content that appears when you click the title.' %}{% include 'collapsible.html' %}{% endwith %}
+                        {% else %}
+                            <p class="text-muted">Live preview not available for this component.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </section>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

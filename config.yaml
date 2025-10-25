@@ -1,0 +1,32 @@
+site_name: "Static Site Generator"
+site_description: "A modern, component-based static site generator built with Flask"
+site_url: "https://example.com"
+
+theme:
+  default_mode: "light"
+  primary_color: "#0d6efd"
+  secondary_color: "#6c757d"
+  success_color: "#198754"
+  danger_color: "#dc3545"
+  warning_color: "#ffc107"
+  info_color: "#0dcaf0"
+  
+author:
+  name: "Your Name"
+  email: "your.email@example.com"
+  
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Pattern Library"
+    url: "/pattern-library/"
+  - title: "Documentation"
+    url: "/docs/"
+
+footer:
+  copyright: "© 2025 Static Site Generator. All rights reserved."
+  links:
+    - title: "GitHub"
+      url: "https://github.com"
+    - title: "Documentation"
+      url: "/docs/"
