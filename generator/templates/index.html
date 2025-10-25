@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="hero-section bg-gradient text-white py-5 mb-5">
+    <div class="container text-center py-5">
+        <h1 class="display-3 fw-bold mb-4 fade-in">{{ site_name }}</h1>
+        <p class="lead mb-4 fade-in" style="animation-delay: 0.2s">{{ site_description }}</p>
+        <div class="fade-in" style="animation-delay: 0.4s">
+            <a href="/pattern-library/" class="btn btn-light btn-lg me-2">
+                <i class="bi bi-palette"></i> View Components
+            </a>
+            {% if pages %}
+            <a href="{{ pages[0].url }}" class="btn btn-outline-light btn-lg">
+                <i class="bi bi-book"></i> Read Documentation
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-lg-12">
+            <h2 class="mb-4"><i class="bi bi-file-earmark-text"></i> Recent Pages</h2>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        {% for page in pages[:12] %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm hover-lift">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{{ page.url }}" class="text-decoration-none">{{ page.metadata.title }}</a>
+                    </h5>
+                    {% if page.metadata.description %}
+                    <p class="card-text text-muted">{{ page.metadata.description }}</p>
+                    {% endif %}
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        {% if page.metadata.date %}
+                        <small class="text-muted">
+                            <i class="bi bi-calendar"></i> {{ page.metadata.date }}
+                        </small>
+                        {% endif %}
+                        <a href="{{ page.url }}" class="btn btn-sm btn-primary">
+                            Read More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+        {% if not pages %}
+        <div class="col-12">
+            <div class="alert alert-info text-center">
+                <i class="bi bi-info-circle"></i> No pages found. Add Markdown files to the content directory and rebuild.
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    
+    {% if pages|length > 12 %}
+    <div class="text-center mt-5">
+        <p class="text-muted">Showing 12 of {{ pages|length }} pages</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

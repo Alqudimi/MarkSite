@@ -1,0 +1,27 @@
+{% set hero_variant = variant|default('primary') %}
+{% set hero_class = 'hero-component text-white py-5 my-4' %}
+{% if hero_variant == 'dark' %}
+    {% set hero_class = hero_class ~ ' bg-dark' %}
+{% elif hero_variant == 'light' %}
+    {% set hero_class = hero_class ~ ' bg-light text-dark' %}
+{% else %}
+    {% set hero_class = hero_class ~ ' bg-gradient' %}
+{% endif %}
+
+<div class="{{ hero_class }}" {% if image %}style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ image }}'); background-size: cover; background-position: center;"{% endif %}>
+    <div class="container text-center py-5">
+        {% if title %}
+        <h1 class="display-3 fw-bold mb-4">{{ title }}</h1>
+        {% endif %}
+        
+        {% if subtitle %}
+        <p class="lead mb-4">{{ subtitle }}</p>
+        {% endif %}
+        
+        {% if cta_text and cta_link %}
+        <a href="{{ cta_link }}" class="btn btn-light btn-lg">
+            {{ cta_text }} <i class="bi bi-arrow-right"></i>
+        </a>
+        {% endif %}
+    </div>
+</div>

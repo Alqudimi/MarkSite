@@ -1,0 +1,24 @@
+{% set show_copy = copy|default('true') %}
+{% set code_id = 'code-' ~ range(1000, 9999)|random %}
+
+<div class="code-sample-component mb-3">
+    {% if title %}
+    <div class="code-title bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center">
+        <span><i class="bi bi-code-slash"></i> {{ title }}</span>
+        {% if show_copy != 'false' %}
+        <button class="btn btn-sm btn-outline-light copy-code-btn" data-code-id="{{ code_id }}">
+            <i class="bi bi-clipboard"></i> Copy
+        </button>
+        {% endif %}
+    </div>
+    {% endif %}
+    
+    <div class="position-relative">
+        {% if show_copy != 'false' and not title %}
+        <button class="btn btn-sm btn-outline-secondary copy-code-btn position-absolute top-0 end-0 m-2" data-code-id="{{ code_id }}">
+            <i class="bi bi-clipboard"></i>
+        </button>
+        {% endif %}
+        <pre class="mb-0"><code id="{{ code_id }}" class="language-{{ language|default('text') }}">{{ content|default('// Code here') }}</code></pre>
+    </div>
+</div>

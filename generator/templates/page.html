@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.metadata.title }} - {{ site_name }}{% endblock %}
+{% block description %}{{ page.metadata.description or site_description }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% if page.toc %}
+        <div class="col-lg-9">
+        {% else %}
+        <div class="col-lg-12">
+        {% endif %}
+            <article class="content-page fade-in">
+                <header class="mb-4">
+                    <h1 class="display-4 mb-3">{{ page.metadata.title }}</h1>
+                    <div class="text-muted mb-3">
+                        {% if page.metadata.date %}
+                        <i class="bi bi-calendar"></i> {{ page.metadata.date }}
+                        {% endif %}
+                        {% if page.metadata.author %}
+                        <i class="bi bi-person ms-3"></i> {{ page.metadata.author }}
+                        {% endif %}
+                        {% if page.metadata.tags %}
+                        <div class="mt-2">
+                            {% for tag in page.metadata.tags %}
+                            <span class="badge bg-secondary me-1">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% if page.metadata.description %}
+                    <p class="lead text-muted">{{ page.metadata.description }}</p>
+                    {% endif %}
+                </header>
+                
+                <div class="content-body">
+                    {{ page.content|safe }}
+                </div>
+            </article>
+        </div>
+        
+        {% if page.toc %}
+        <div class="col-lg-3 d-none d-lg-block">
+            <div class="sticky-sidebar">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6 class="mb-0"><i class="bi bi-list-ul"></i> Table of Contents</h6>
+                    </div>
+                    <div class="card-body toc-content">
+                        {{ page.toc|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
