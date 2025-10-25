@@ -1,0 +1,42 @@
+{% extends "inkwell/base.html" %}
+
+{% block title %}{{ site_name }} - A Collection of Writings{% endblock %}
+
+{% block content %}
+<div class="inkwell-hero text-center">
+    <div class="container-fluid px-5 py-5">
+        <h1 class="inkwell-hero-title mb-3 fade-in">{{ site_name }}</h1>
+        <p class="inkwell-hero-subtitle mx-auto mb-5 fade-in" style="animation-delay: 0.2s">{{ site_description }}</p>
+    </div>
+</div>
+
+<div class="container-fluid px-5 py-5">
+    <h2 class="inkwell-section-title mb-5"><span>Recent Entries</span></h2>
+    
+    <div class="row g-5">
+        {% for page in pages[:6] %}
+        <div class="col-md-6">
+            <a href="{{ page.url }}" class="text-decoration-none">
+                <div class="inkwell-card">
+                    <h3 class="inkwell-card-title">{{ page.metadata.title }}</h3>
+                    {% if page.metadata.description %}
+                    <p class="inkwell-card-text">{{ page.metadata.description }}</p>
+                    {% endif %}
+                    <div class="inkwell-card-meta mt-4">
+                        {% if page.metadata.date %}
+                        <span>{{ page.metadata.date }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+        
+        {% if not pages %}
+        <div class="col-12 text-center py-5">
+            <p class="inkwell-hero-subtitle">The pages are currently blank.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

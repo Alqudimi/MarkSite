@@ -1,0 +1,18 @@
+{% extends "retrowave/base.html" %}
+
+{% block title %}Component Matrix - {{ site_name }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <header class="mb-5">
+                <h1 class="retrowave-title">Component_Matrix_</h1>
+                <p class="retrowave-subtitle">> A library of all available system components.</p>
+            </header>
+
+            {% include 'pattern-library-content.html' %}
+        </div>
+    </div>
+</div>
+{% endblock %}

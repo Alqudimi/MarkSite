@@ -72,13 +72,17 @@ python build.py --template techblog --output myblog
 
 ### Available Templates
 
-Choose from 5 beautiful, professionally designed templates:
+Choose from 9 beautiful, professionally designed templates:
 
 1. **Default** - Classic, professional design with Bootstrap styling
 2. **Minimalist** - Clean, spacious layout with subtle colors and elegant typography
 3. **Tech Blog** - Dark theme with neon accents, grid backgrounds, and tech-focused aesthetics
 4. **Documentation** - Professional documentation style optimized for technical content
 5. **Portfolio** - Showcase-focused design with bold typography and golden accents
+6. **Magazine** - Modern editorial design with bold typography and news-style layouts
+7. **Landing** - Conversion-focused landing page with gradient accents and modern UI
+8. **Creative** - Bold, artistic design with dramatic styling and gold accents
+9. **Personal Blog** - Warm, cozy blogging theme with serif typography and earthy tones
 
 Each template includes:
 - Unique color schemes and typography
@@ -289,7 +293,8 @@ site_name: "My Site"
 site_description: "Site description"
 site_url: "https://example.com"
 
-# Template: Choose from 'default', 'minimalist', 'techblog', 'documentation', or 'portfolio'
+# Template: Choose from 'default', 'minimalist', 'techblog', 'documentation', 'portfolio',
+# 'magazine', 'landing', 'creative', or 'personalblog'
 template: "default"
 
 theme:
@@ -470,6 +475,17 @@ Contributions welcome! To add features or fix bugs:
 - Examples: See the `content/` directory for samples
 
 ## Changelog
+
+### Version 2.2.0 (2025-10-25)
+- **9 Professional Templates**: Default, Minimalist, Tech Blog, Documentation, Portfolio, Magazine, Landing, Creative, Personal Blog
+- **4 New Templates Added**:
+  - **Magazine**: Modern editorial design with bold typography, perfect for news sites and content publishers
+  - **Landing**: Conversion-focused design with gradient accents, ideal for products and services
+  - **Creative**: Bold artistic design with dramatic styling, great for agencies and creative portfolios
+  - **Personal Blog**: Warm, cozy theme with serif typography, perfect for personal writing and storytelling
+- Template selection via CLI (`--template`) or config file
+- Each template with unique design language and aesthetics
+- All templates fully responsive with light/dark mode support
 
 ### Version 2.1.0 (2025-10-25)
 - **5 Professional Templates**: Default, Minimalist, Tech Blog, Documentation, Portfolio

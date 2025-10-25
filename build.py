@@ -38,7 +38,7 @@ Examples:
     parser.add_argument(
         '--template', '-t',
         default=None,
-        choices=['default', 'minimalist', 'techblog', 'documentation', 'portfolio'],
+        choices=['default', 'minimalist', 'techblog', 'documentation', 'portfolio', 'magazine', 'landing', 'creative', 'personalblog','inkwell','futuristic','monochrome','oasis','retrowave'],
         help='Template theme to use (default: from config.yaml or "default")'
     )
     

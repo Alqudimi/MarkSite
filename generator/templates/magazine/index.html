@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="magazine-hero">
+    <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="magazine-hero-badge mb-4">Latest Stories</div>
+                <h1 class="magazine-hero-title mb-4 animate-fade-in">{{ site_name }}</h1>
+                <p class="magazine-hero-subtitle mb-5 animate-slide-up">{{ site_description }}</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap animate-slide-up">
+                    <a href="#recent-pages" class="btn magazine-btn-primary">Explore Articles</a>
+                    <a href="/pattern-library/" class="btn magazine-btn-secondary">View Components</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-5">
+    <div id="recent-pages" class="magazine-section">
+        <div class="magazine-section-header">
+            <div class="magazine-section-subtitle">Recent</div>
+            <h2 class="magazine-section-title">Latest Articles</h2>
+        </div>
+        
+        <div class="row g-4">
+            {% for page in pages[:3] %}
+            <div class="col-lg-4 col-md-6">
+                <div class="magazine-card animate-fade-in" style="animation-delay: {{ loop.index0 * 0.1 }}s">
+                    <div class="magazine-card-body">
+                        <span class="magazine-card-category">Article</span>
+                        <h3 class="magazine-card-title">
+                            <a href="{{ page.url }}">{{ page.metadata.title }}</a>
+                        </h3>
+                        <p class="magazine-card-text">{{ page.metadata.description|default('Discover insights and stories...') }}</p>
+                        <div class="magazine-card-meta">
+                            {% if page.metadata.date %}
+                            <div class="magazine-card-date">
+                                <i class="bi bi-calendar3"></i>
+                                <span>{{ page.metadata.date }}</span>
+                            </div>
+                            {% endif %}
+                            {% if page.metadata.author %}
+                            <div class="magazine-card-author">
+                                <i class="bi bi-person-circle"></i>
+                                <span>{{ page.metadata.author }}</span>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

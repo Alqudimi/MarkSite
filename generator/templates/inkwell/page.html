@@ -1,0 +1,28 @@
+{% extends "inkwell/base.html" %}
+
+{% block title %}{{ page.metadata.title }} - {{ site_name }}{% endblock %}
+{% block description %}{{ page.metadata.description or site_description }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <article class="inkwell-article fade-in">
+                <header class="mb-5 text-center">
+                    <h1 class="inkwell-title mb-4">{{ page.metadata.title }}</h1>
+                    <div class="inkwell-meta">
+                        <span>Written on {{ page.metadata.date or 'an unknown date' }}</span>
+                        {% if page.metadata.author %}
+                        <span>by {{ page.metadata.author }}</span>
+                        {% endif %}
+                    </div>
+                </header>
+                
+                <div class="content-body inkwell-content">
+                    {{ page.content|safe }}
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}

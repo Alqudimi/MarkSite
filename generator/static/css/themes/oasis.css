@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Lato:wght@400;700&display=swap');
+
+:root {
+    --oasis-green: #556B2F; /* Olive Green */
+    --oasis-beige: #F5F5DC; /* Beige */
+    --oasis-blue: #5F9EA0;  /* Cadet Blue */
+    --oasis-clay: #A0522D;  /* Sienna */
+    --oasis-text: #3D403A;
+    --oasis-bg: #FCFBF8;
+    --oasis-border: #EAE8E1;
+
+    --oasis-dark-bg: #2C3531;
+    --oasis-dark-text: #D9D5C6;
+    --oasis-dark-border: #414A43;
+}
+
+.oasis-theme {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--oasis-bg);
+    color: var(--oasis-text);
+    line-height: 1.7;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.oasis-navbar {
+    background: rgba(252, 251, 248, 0.85) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--oasis-border);
+}
+
+.oasis-brand {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--oasis-green) !important;
+}
+
+.oasis-nav-link {
+    color: var(--oasis-text) !important;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.oasis-nav-link:hover {
+    color: var(--oasis-clay) !important;
+}
+
+.oasis-icon-btn {
+    border-color: var(--oasis-border);
+    color: var(--oasis-text);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.oasis-icon-btn:hover {
+    background-color: var(--oasis-beige);
+    border-color: var(--oasis-green);
+    color: var(--oasis-green);
+}
+
+.oasis-hero {
+    background-color: var(--oasis-beige);
+    border-bottom: 1px solid var(--oasis-border);
+}
+
+.oasis-hero-title {
+    font-family: 'Lora', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--oasis-green);
+}
+
+.oasis-hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 650px;
+    color: var(--oasis-text);
+    opacity: 0.8;
+}
+
+.oasis-btn-primary {
+    background-color: var(--oasis-green);
+    color: var(--oasis-bg);
+    border: 2px solid var(--oasis-green);
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.oasis-btn-primary:hover {
+    background-color: #4A5D28;
+    border-color: #4A5D28;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: var(--oasis-bg);
+}
+
+.oasis-btn-secondary {
+    background-color: transparent;
+    color: var(--oasis-green);
+    border: 2px solid var(--oasis-green);
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.oasis-btn-secondary:hover {
+    background-color: var(--oasis-green);
+    color: var(--oasis-bg);
+    transform: translateY(-2px);
+}
+
+.oasis-section-title {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--oasis-green);
+}
+
+.oasis-card {
+    border: 1px solid var(--oasis-border);
+    border-radius: 12px;
+    padding: 2rem;
+    background: var(--oasis-bg);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.oasis-card:hover {
+    border-color: var(--oasis-green);
+    box-shadow: 0 8px 25px rgba(85, 107, 47, 0.1);
+    transform: translateY(-5px);
+}
+
+.oasis-card-title a {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--oasis-text);
+    text-decoration: none;
+}
+
+.oasis-card-title a:hover {
+    color: var(--oasis-clay);
+}
+
+.oasis-card-text {
+    opacity: 0.8;
+}
+
+.oasis-arrow-link {
+    color: var(--oasis-clay);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.oasis-arrow-link i {
+    transition: transform 0.2s;
+}
+
+.oasis-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+.oasis-title {
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--oasis-green);
+}
+
+.oasis-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.8;
+}
+
+.oasis-meta {
+    color: var(--oasis-text);
+    opacity: 0.7;
+}
+
+.oasis-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.oasis-content h2, .oasis-content h3 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    color: var(--oasis-green);
+    margin-top: 2.5rem;
+}
+
+.oasis-content a {
+    color: var(--oasis-clay);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(160, 82, 45, 0.3);
+    transition: border-color 0.3s;
+}
+
+.oasis-content a:hover {
+    border-bottom-color: var(--oasis-clay);
+}
+
+.oasis-content blockquote {
+    border-left: 3px solid var(--oasis-green);
+    background-color: var(--oasis-beige);
+    padding: 1rem 1.5rem;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+}
+
+.oasis-toc {
+    border-left: 2px solid var(--oasis-border);
+    padding-left: 1.5rem;
+}
+
+.oasis-toc a {
+    color: var(--oasis-text);
+    opacity: 0.7;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.oasis-toc a:hover {
+    opacity: 1;
+    color: var(--oasis-clay);
+}
+
+.oasis-footer {
+    background-color: var(--oasis-beige);
+}
+
+.oasis-footer-link {
+    color: var(--oasis-text);
+    opacity: 0.8;
+}
+
+.oasis-footer-link:hover {
+    color: var(--oasis-clay);
+    opacity: 1;
+}
+
+/* Dark Mode */
+[data-bs-theme="dark"] .oasis-theme {
+    background-color: var(--oasis-dark-bg);
+    color: var(--oasis-dark-text);
+}
+[data-bs-theme="dark"] .oasis-navbar {
+    background: rgba(44, 53, 49, 0.85) !important;
+    border-bottom-color: var(--oasis-dark-border);
+}
+[data-bs-theme="dark"] .oasis-brand,
+[data-bs-theme="dark"] .oasis-hero-title,
+[data-bs-theme="dark"] .oasis-section-title,
+[data-bs-theme="dark"] .oasis-content h2,
+[data-bs-theme="dark"] .oasis-content h3 {
+    color: #B2C593; /* Lighter olive */
+}
+[data-bs-theme="dark"] .oasis-card {
+    background: #36413A;
+    border-color: var(--oasis-dark-border);
+}
+[data-bs-theme="dark"] .oasis-card-title a {
+    color: var(--oasis-dark-text);
+}
+[data-bs-theme="dark"] .oasis-hero {
+    background-color: #36413A;
+    border-bottom-color: var(--oasis-dark-border);
+}
+[data-bs-theme="dark"] .oasis-content a,
+[data-bs-theme="dark"] .oasis-arrow-link {
+    color: #D2B48C; /* Tan */
+}
+[data-bs-theme="dark"] .oasis-footer {
+    background-color: #36413A;
+}
+[data-bs-theme="dark"] .oasis-content blockquote {
+    background-color: var(--oasis-dark-border);
+    border-left-color: #B2C593;
+}

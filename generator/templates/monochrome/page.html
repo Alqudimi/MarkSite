@@ -1,0 +1,30 @@
+{% extends "monochrome/base.html" %}
+
+{% block title %}{{ page.metadata.title }} - {{ site_name }}{% endblock %}
+{% block description %}{{ page.metadata.description or site_description }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <article class="monochrome-article fade-in">
+                <header class="mb-5">
+                    <h1 class="monochrome-title">{{ page.metadata.title }}</h1>
+                    <div class="monochrome-meta mt-3">
+                        {% if page.metadata.date %}
+                        <span>{{ page.metadata.date }}</span>
+                        {% endif %}
+                        {% if page.metadata.author %}
+                        <span>/ By {{ page.metadata.author }}</span>
+                        {% endif %}
+                    </div>
+                </header>
+                
+                <div class="content-body monochrome-content">
+                    {{ page.content|safe }}
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "retrowave/base.html" %}
+
+{% block title %}{{ page.metadata.title }} - Loading...{% endblock %}
+{% block description %}{{ page.metadata.description or site_description }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <article class="retrowave-article fade-in">
+                <header class="mb-5">
+                    <h1 class="retrowave-title">{{ page.metadata.title }}_</h1>
+                    <div class="retrowave-meta mt-3">
+                        <span>FILE_DATE: {{ page.metadata.date or 'UNKNOWN' }}</span>
+                        <span>AUTHOR: {{ page.metadata.author or 'SYSTEM' }}</span>
+                    </div>
+                </header>
+                
+                <div class="content-body retrowave-content">
+                    {{ page.content|safe }}
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --ink-bg: #FDFBF5; /* Creamy Paper */
+    --ink-text: #2C2B28; /* Dark Ink */
+    --ink-accent: #B8860B; /* Dark Goldenrod */
+    --ink-border: #EAE3D9;
+    
+    --ink-dark-bg: #1C1C1C; /* Charcoal */
+    --ink-dark-text: #D4CFC4; /* Light Cream */
+    --ink-dark-border: #3A3A3A;
+}
+
+.inkwell-theme {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--ink-bg);
+    color: var(--ink-text);
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.inkwell-navbar {
+    background: rgba(253, 251, 245, 0.8) !important;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--ink-border);
+}
+
+.inkwell-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--ink-text) !important;
+}
+
+.inkwell-nav-link {
+    color: var(--ink-text) !important;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+.inkwell-nav-link:hover {
+    opacity: 1;
+}
+
+.inkwell-icon-btn {
+    border-color: var(--ink-border);
+    color: var(--ink-text);
+    opacity: 0.7;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.inkwell-icon-btn:hover {
+    opacity: 1;
+    background-color: var(--ink-border);
+}
+
+.inkwell-hero {
+    border-bottom: 1px solid var(--ink-border);
+}
+
+.inkwell-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.inkwell-hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    max-width: 600px;
+    opacity: 0.8;
+}
+
+.inkwell-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: var(--ink-text);
+    opacity: 0.8;
+}
+.inkwell-section-title::before,
+.inkwell-section-title::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--ink-border);
+}
+.inkwell-section-title span {
+    padding: 0 2rem;
+}
+
+.inkwell-card {
+    padding: 2rem;
+    border-bottom: 1px solid var(--ink-border);
+    transition: background-color 0.3s;
+}
+.inkwell-card:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.inkwell-card-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--ink-text);
+}
+
+.inkwell-card-text {
+    color: var(--ink-text);
+    opacity: 0.7;
+}
+
+.inkwell-card-meta {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: var(--ink-text);
+    opacity: 0.5;
+}
+
+.inkwell-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.inkwell-meta {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.inkwell-content {
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+
+.inkwell-content h2, .inkwell-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-top: 3rem;
+}
+
+.inkwell-content a {
+    color: var(--ink-accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink-accent);
+    transition: background-color 0.3s;
+}
+.inkwell-content a:hover {
+    background-color: rgba(184, 134, 11, 0.1);
+}
+
+.inkwell-content blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    border-left: 2px solid var(--ink-accent);
+    padding-left: 2rem;
+    margin: 2.5rem 0;
+    opacity: 0.9;
+}
+
+.inkwell-footer {
+    background-color: transparent;
+    border-top: 1px solid var(--ink-border);
+    color: var(--ink-text);
+    opacity: 0.6;
+}
+
+.inkwell-footer-link {
+    color: var(--ink-text);
+}
+.inkwell-footer-link:hover {
+    color: var(--ink-accent);
+}
+
+.inkwell-modal {
+    background-color: var(--ink-bg);
+    border: 1px solid var(--ink-border);
+}
+.inkwell-search-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--ink-border);
+    border-radius: 0;
+}
+.inkwell-search-input:focus {
+    background: transparent;
+    border-color: var(--ink-accent);
+    box-shadow: none;
+}
+
+/* Dark Mode */
+[data-bs-theme="dark"] .inkwell-theme {
+    background-color: var(--ink-dark-bg);
+    color: var(--ink-dark-text);
+}
+[data-bs-theme="dark"] .inkwell-navbar {
+    background: rgba(28, 28, 28, 0.8) !important;
+    border-bottom-color: var(--ink-dark-border);
+}
+[data-bs-theme="dark"] .inkwell-brand,
+[data-bs-theme="dark"] .inkwell-nav-link,
+[data-bs-theme="dark"] .inkwell-icon-btn,
+[data-bs-theme="dark"] .inkwell-card-title,
+[data-bs-theme="dark"] .inkwell-card-text,
+[data-bs-theme="dark"] .inkwell-footer,
+[data-bs-theme="dark"] .inkwell-footer-link {
+    color: var(--ink-dark-text) !important;
+}
+[data-bs-theme="dark"] .inkwell-section-title,
+[data-bs-theme="dark"] .inkwell-section-title::before,
+[data-bs-theme="dark"] .inkwell-section-title::after {
+    border-color: var(--ink-dark-border);
+}
+[data-bs-theme="dark"] .inkwell-card {
+    border-bottom-color: var(--ink-dark-border);
+}
+[data-bs-theme="dark"] .inkwell-card:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+[data-bs-theme="dark"] .inkwell-modal {
+    background-color: var(--ink-dark-bg);
+    border-color: var(--ink-dark-border);
+}
+[data-bs-theme="dark"] .btn-close {
+    filter: invert(1);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}{{ site_description }}{% endblock %}">
+    <title>{% block title %}{{ site_name }}{% endblock %}</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/themes/monochrome.css">
+    <link rel="stylesheet" href="/static/css/pygments.css">
+    <link rel="stylesheet" href="/static/css/animations.css">
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="monochrome-theme">
+    <nav class="navbar navbar-expand-lg monochrome-navbar">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand monochrome-brand" href="/">
+                {{ site_name }}
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    {% if config.navigation %}
+                        {% for item in config.navigation %}
+                        <li class="nav-item">
+                            <a class="nav-link monochrome-nav-link" href="{{ item.url }}"><span>{{ item.title }}</span></a>
+                        </li>
+                        {% endfor %}
+                    {% endif %}
+                    <li class="nav-item ms-3">
+                        <button id="theme-toggle" class="btn btn-sm monochrome-icon-btn" aria-label="Toggle theme">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-sm monochrome-icon-btn" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="monochrome-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="monochrome-footer py-5 mt-5">
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">{{ config.footer.copyright if config.footer else '© 2025 All rights reserved.' }}</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    {% if config.footer and config.footer.links %}
+                        {% for link in config.footer.links %}
+                        <a href="{{ link.url }}" class="text-decoration-none me-4 monochrome-footer-link">{{ link.title }}</a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content monochrome-modal border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="search-input" class="form-control form-control-lg monochrome-search-input" placeholder="Type and press enter...">
+                    <div id="search-results" class="mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+    <script src="/static/js/theme.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/components.js"></script>
+    
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>
