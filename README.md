@@ -1,14 +1,6 @@
 # MarkSite
 
-<div align="center">
 
-![MarkSite Logo](https://img.shields.io/badge/MarkSite-Static%20Site%20Generator-blue)
-![Python](https://img.shields.io/badge/Python-3.11%2B-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-
-
-</div>
 <p align="center">
   <a href="https://github.com/Alqudimi/MarkSite">
     <img src="assets/images/logo.png" alt="Project Logo" width="450" height="450">
@@ -50,9 +42,17 @@
     <img src="https://img.shields.io/github/issues/Alqudimi/MarkSite.svg" alt="Issues">
   </a>
 </p>
+<div align="center">
+
+![MarkSite Logo](https://img.shields.io/badge/MarkSite-Static%20Site%20Generator-blue)
+![Python](https://img.shields.io/badge/Python-3.11%2B-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+
+
+</div>
 ---
-[Features](#features) • [Quick Start](#quick-start) • [Documentation](doc/) • [Templates](#templates) • [Components](#components)
----
+
 ## Overview
 
 MarkSite is a high-performance static site generator that converts Markdown content into stunning, production-ready websites. Built with Python, Flask, and Jinja2, it offers a powerful component system, 14 professional templates, and advanced features for developers and content creators.
