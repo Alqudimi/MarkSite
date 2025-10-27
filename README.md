@@ -6,12 +6,51 @@
 ![Python](https://img.shields.io/badge/Python-3.11%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-A powerful, component-based static site generator built with Python. Transform Markdown files into beautiful, modern static websites with 14 professional templates and 8 interactive components.
 
 [Features](#features) • [Quick Start](#quick-start) • [Documentation](doc/) • [Templates](#templates) • [Components](#components)
 
 </div>
+<p align="center">
+  <a href="https://github.com/Alqudimi/MarkSite">
+    <img src="assets/images/logo.png" alt="Project Logo" width="200" height="200">
+  </a>
+</p>
 
+<h1 align="center">MarkSite</h1>
+
+<h3 align="center">Transform Markdown into Beautiful, Professional Websites</h3>
+
+<p align="center">
+  A powerful, component-based static site generator built with Python. Transform Markdown files into beautiful, modern static websites with 14 professional templates and 8 interactive components.
+  <br />
+  <br />
+  <a href="https://github.com/Alqudimi/MarkSite/doc"><strong>Explore the Docs »</strong></a>
+  <br />
+  <br />
+  <a href="https://github.com/Alqudimi/MarkSite/demo">View Demo</a>
+  ·
+  <a href="https://github.com/Alqudimi/MarkSite/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/Alqudimi/MarkSite/issues">Request Feature</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Alqudimi/MarkSite/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+  </a>
+  <a href="https://github.com/Alqudimi/MarkSite/releases">
+    <img src="https://img.shields.io/badge/version-1.0.0-green.svg" alt="Version">
+  </a>
+  <a href="https://github.com/Alqudimi/MarkSite/stargazers">
+    <img src="https://img.shields.io/github/stars/Alqudimi/MarkSite.svg?style=social&label=Stars" alt="Stars">
+  </a>
+  <a href="https://github.com/Alqudimi/MarkSite/forks">
+    <img src="https://img.shields.io/github/forks/Alqudimi/MarkSite.svg?style=social&label=Forks" alt="Forks">
+  </a>
+  <a href="https://github.com/Alqudimi/MarkSite/issues">
+    <img src="https://img.shields.io/github/issues/Alqudimi/MarkSite.svg" alt="Issues">
+  </a>
+</p>
 ---
 
 ## Overview
