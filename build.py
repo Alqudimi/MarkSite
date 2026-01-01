@@ -38,7 +38,7 @@ Examples:
     parser.add_argument(
         '--template', '-t',
         default=None,
-        choices=['default', 'minimalist', 'techblog', 'documentation', 'portfolio', 'magazine', 'landing', 'creative', 'personalblog','inkwell','futuristic','monochrome','oasis','retrowave'],
+        choices=['default', 'minimalist', 'techblog', 'documentation', 'portfolio',  'magazine', 'landing', 'creative', 'personalblog', 'inkwell',  'futuristic', 'monochrome', 'oasis', 'retrowave','serenity', 'dark-nebula', 'vibrant-grid', 'eco-green', 'luxury-gold',  'cyberpunk','brutalist', 'oceanic', 'autumn-whisper', 'neon-night'],
         help='Template theme to use (default: from config.yaml or "default")'
     )
     

@@ -1,0 +1,385 @@
+.eco-green-theme {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3436;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    background: linear-gradient(135deg, #f0f8f4 0%, #e8f5f0 100%);
+}
+
+.eco-green-navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 2px solid #40916c;
+    box-shadow: 0 2px 8px rgba(45, 106, 79, 0.1);
+}
+
+.eco-green-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d6a4f;
+    transition: all 0.3s ease;
+}
+
+.eco-green-brand:hover {
+    color: #40916c;
+}
+
+.eco-green-nav-link {
+    color: #555;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem !important;
+    transition: all 0.3s ease;
+}
+
+.eco-green-nav-link:hover {
+    color: #2d6a4f;
+    background: rgba(64, 145, 108, 0.1);
+    border-radius: 4px;
+}
+
+.eco-green-icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(64, 145, 108, 0.1);
+    border: 1px solid #40916c;
+    color: #2d6a4f;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.eco-green-icon-btn:hover {
+    background: #40916c;
+    color: white;
+    box-shadow: 0 4px 12px rgba(64, 145, 108, 0.3);
+}
+
+.eco-green-main {
+    min-height: calc(100vh - 300px);
+}
+
+.eco-green-hero {
+    background: linear-gradient(135deg, rgba(240, 248, 244, 0.8) 0%, rgba(232, 245, 240, 0.8) 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #40916c;
+}
+
+.eco-green-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(64, 145, 108, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.eco-green-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #2d6a4f;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.eco-green-hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #555;
+    font-weight: 400;
+}
+
+.eco-green-btn {
+    background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    padding: 0.75rem 2.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 12px rgba(64, 145, 108, 0.2);
+}
+
+.eco-green-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(64, 145, 108, 0.3);
+    color: white;
+}
+
+.eco-green-btn-outline {
+    color: #2d6a4f;
+    border: 2px solid #2d6a4f;
+    background: transparent;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    padding: 0.6rem 2.3rem;
+    transition: all 0.3s ease;
+}
+
+.eco-green-btn-outline:hover {
+    background: #2d6a4f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.eco-green-section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #2d6a4f;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.eco-green-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #2d6a4f, #40916c);
+}
+
+.eco-green-card {
+    padding: 2rem;
+    border: 1px solid #d0e8e0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.4s ease;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(45, 106, 79, 0.08);
+}
+
+.eco-green-card:hover {
+    border-color: #40916c;
+    box-shadow: 0 12px 32px rgba(64, 145, 108, 0.15);
+    transform: translateY(-4px);
+}
+
+.eco-green-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-bottom: 1rem;
+    color: #2d6a4f;
+}
+
+.eco-green-card-title a {
+    color: #2d6a4f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.eco-green-card-title a:hover {
+    color: #40916c;
+}
+
+.eco-green-card-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+.eco-green-arrow-link {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.eco-green-arrow-link:hover {
+    color: #40916c;
+}
+
+.eco-green-arrow-link i {
+    transition: transform 0.3s ease;
+}
+
+.eco-green-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+.eco-green-article {
+    max-width: 100%;
+}
+
+.eco-green-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    color: #2d6a4f;
+    margin-bottom: 1.5rem;
+}
+
+.eco-green-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    font-weight: 400;
+}
+
+.eco-green-meta {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.eco-green-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #444;
+}
+
+.eco-green-content h1,
+.eco-green-content h2,
+.eco-green-content h3 {
+    color: #2d6a4f;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.eco-green-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #40916c;
+    padding-bottom: 0.5rem;
+}
+
+.eco-green-content h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #95b46f;
+    padding-bottom: 0.5rem;
+}
+
+.eco-green-content h3 {
+    font-size: 1.5rem;
+}
+
+.eco-green-content p {
+    margin-bottom: 1.5rem;
+}
+
+.eco-green-content a {
+    color: #2d6a4f;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+}
+
+.eco-green-content a:hover {
+    opacity: 0.8;
+}
+
+.eco-green-content blockquote {
+    border-left: 3px solid #40916c;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+.eco-green-toc {
+    padding: 1.5rem;
+    border-left: 2px solid #40916c;
+    background: rgba(64, 145, 108, 0.05);
+    border-radius: 6px;
+}
+
+.eco-green-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.eco-green-toc .toc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.eco-green-toc .toc-content a {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.eco-green-toc .toc-content a:hover {
+    color: #40916c;
+}
+
+.eco-green-footer {
+    background: rgba(240, 248, 244, 0.8);
+    border-top: 2px solid #40916c;
+}
+
+.eco-green-link {
+    transition: opacity 0.3s ease;
+}
+
+.eco-green-link:hover {
+    opacity: 0.8;
+}
+
+.eco-green-modal-content {
+    background: white;
+    border: 1px solid #40916c;
+}
+
+[data-bs-theme="dark"] .eco-green-theme {
+    background: linear-gradient(135deg, #1a1a1a 0%, #1f2f2a 100%);
+    color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .eco-green-navbar {
+    background: #1a1a1a !important;
+    border-bottom-color: #40916c;
+}
+
+[data-bs-theme="dark"] .eco-green-card {
+    background: #2d2d2d;
+    border-color: #40916c;
+}
+
+[data-bs-theme="dark"] .eco-green-content {
+    color: #d0d0d0;
+}
+
+[data-bs-theme="dark"] .eco-green-footer {
+    background: #1a1a1a;
+    border-top-color: #40916c;
+}
+
+@media (max-width: 768px) {
+    .eco-green-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .eco-green-title {
+        font-size: 2rem;
+    }
+    
+    .eco-green-card {
+        padding: 1.5rem;
+    }
+    
+    .eco-green-section-title {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,386 @@
+.oceanic-theme {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a3a3a;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    background: linear-gradient(135deg, #e6f7fb 0%, #f0fafc 100%);
+}
+
+.oceanic-navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 3px solid #0077be;
+    box-shadow: 0 2px 8px rgba(0, 119, 190, 0.1);
+}
+
+.oceanic-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0077be;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.oceanic-brand:hover {
+    color: #0096c7;
+}
+
+.oceanic-nav-link {
+    color: #1a3a3a;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem !important;
+    transition: all 0.3s ease;
+}
+
+.oceanic-nav-link:hover {
+    color: #0077be;
+    background: rgba(0, 119, 190, 0.08);
+    border-radius: 4px;
+}
+
+.oceanic-icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 119, 190, 0.1);
+    border: 1px solid #0077be;
+    color: #0077be;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.oceanic-icon-btn:hover {
+    background: #0077be;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 119, 190, 0.3);
+}
+
+.oceanic-main {
+    min-height: calc(100vh - 300px);
+}
+
+.oceanic-hero {
+    background: linear-gradient(135deg, rgba(230, 247, 251, 0.8) 0%, rgba(240, 250, 252, 0.8) 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #0077be;
+}
+
+.oceanic-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 119, 190, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.oceanic-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #0077be;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.oceanic-hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #1a3a3a;
+    font-weight: 400;
+}
+
+.oceanic-btn {
+    background: linear-gradient(135deg, #0077be 0%, #0096c7 100%);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    padding: 0.75rem 2.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 119, 190, 0.2);
+}
+
+.oceanic-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 119, 190, 0.3);
+    color: white;
+}
+
+.oceanic-btn-outline {
+    color: #0077be;
+    border: 2px solid #0077be;
+    background: transparent;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    padding: 0.6rem 2.3rem;
+    transition: all 0.3s ease;
+}
+
+.oceanic-btn-outline:hover {
+    background: #0077be;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.oceanic-section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #0077be;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.oceanic-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #0077be, #0096c7, #90e0ef);
+}
+
+.oceanic-card {
+    padding: 2rem;
+    border: 1px solid #b3e5fc;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.4s ease;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 119, 190, 0.08);
+}
+
+.oceanic-card:hover {
+    border-color: #0077be;
+    box-shadow: 0 12px 32px rgba(0, 119, 190, 0.15);
+    transform: translateY(-4px);
+}
+
+.oceanic-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-bottom: 1rem;
+    color: #0077be;
+}
+
+.oceanic-card-title a {
+    color: #0077be;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.oceanic-card-title a:hover {
+    color: #0096c7;
+}
+
+.oceanic-card-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #1a3a3a;
+}
+
+.oceanic-arrow-link {
+    color: #0077be;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.oceanic-arrow-link:hover {
+    color: #0096c7;
+}
+
+.oceanic-arrow-link i {
+    transition: transform 0.3s ease;
+}
+
+.oceanic-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+.oceanic-article {
+    max-width: 100%;
+}
+
+.oceanic-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    color: #0077be;
+    margin-bottom: 1.5rem;
+}
+
+.oceanic-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #1a3a3a;
+    font-weight: 400;
+}
+
+.oceanic-meta {
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.oceanic-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #2a2a2a;
+}
+
+.oceanic-content h1,
+.oceanic-content h2,
+.oceanic-content h3 {
+    color: #0077be;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.oceanic-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #0077be;
+    padding-bottom: 0.5rem;
+}
+
+.oceanic-content h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #0096c7;
+    padding-bottom: 0.5rem;
+}
+
+.oceanic-content h3 {
+    font-size: 1.5rem;
+}
+
+.oceanic-content p {
+    margin-bottom: 1.5rem;
+}
+
+.oceanic-content a {
+    color: #0077be;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+}
+
+.oceanic-content a:hover {
+    opacity: 0.8;
+}
+
+.oceanic-content blockquote {
+    border-left: 3px solid #0096c7;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #555555;
+}
+
+.oceanic-toc {
+    padding: 1.5rem;
+    border-left: 2px solid #0077be;
+    background: rgba(0, 119, 190, 0.05);
+    border-radius: 6px;
+}
+
+.oceanic-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.oceanic-toc .toc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.oceanic-toc .toc-content a {
+    color: #0077be;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.oceanic-toc .toc-content a:hover {
+    color: #0096c7;
+}
+
+.oceanic-footer {
+    background: rgba(230, 247, 251, 0.8);
+    border-top: 3px solid #0077be;
+}
+
+.oceanic-link {
+    transition: opacity 0.3s ease;
+}
+
+.oceanic-link:hover {
+    opacity: 0.8;
+}
+
+.oceanic-modal-content {
+    background: white;
+    border: 1px solid #0077be;
+}
+
+[data-bs-theme="dark"] .oceanic-theme {
+    background: linear-gradient(135deg, #0a1f2e 0%, #0d2a3a 100%);
+    color: #b0d4e0;
+}
+
+[data-bs-theme="dark"] .oceanic-navbar {
+    background: #0a1f2e !important;
+    border-bottom-color: #0096c7;
+}
+
+[data-bs-theme="dark"] .oceanic-card {
+    background: #1a3a4a;
+    border-color: #0096c7;
+}
+
+[data-bs-theme="dark"] .oceanic-content {
+    color: #d0e0e8;
+}
+
+[data-bs-theme="dark"] .oceanic-footer {
+    background: #0a1f2e;
+    border-top-color: #0096c7;
+}
+
+@media (max-width: 768px) {
+    .oceanic-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .oceanic-title {
+        font-size: 2rem;
+    }
+    
+    .oceanic-card {
+        padding: 1.5rem;
+    }
+    
+    .oceanic-section-title {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,404 @@
+.neon-night-theme {
+    font-family: 'Courier New', monospace;
+    color: #e0e0e0;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #0f0f1e 100%);
+    position: relative;
+}
+
+.neon-night-navbar {
+    background: rgba(10, 10, 10, 0.9) !important;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, #ff006e, #00ff00) 1;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.neon-night-brand {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #00ff00;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+.neon-night-brand:hover {
+    color: #ff006e;
+    text-shadow: 0 0 15px rgba(255, 0, 110, 0.6);
+}
+
+.neon-night-nav-link {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.5rem 1.25rem !important;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.neon-night-nav-link:hover {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.neon-night-icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.neon-night-icon-btn:hover {
+    background: rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.neon-night-main {
+    min-height: calc(100vh - 300px);
+}
+
+.neon-night-hero {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 10, 46, 0.9) 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, #ff006e, #00ff00) 1;
+}
+
+.neon-night-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.neon-night-hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #00ff00;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.6), 0 0 40px rgba(255, 0, 110, 0.2);
+}
+
+.neon-night-hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #b0b0b0;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.neon-night-btn {
+    background: linear-gradient(135deg, #00ff00 0%, #ff006e 100%);
+    color: #0a0a0a;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding: 0.75rem 2.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.neon-night-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.8), 0 0 20px rgba(255, 0, 110, 0.5);
+    color: #0a0a0a;
+}
+
+.neon-night-btn-outline {
+    color: #ff006e;
+    border: 2px solid #ff006e;
+    background: transparent;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding: 0.6rem 2.3rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(255, 0, 110, 0.3);
+}
+
+.neon-night-btn-outline:hover {
+    background: rgba(255, 0, 110, 0.1);
+    box-shadow: 0 0 25px rgba(255, 0, 110, 0.6);
+    transform: scale(1.05);
+}
+
+.neon-night-section-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #00ff00;
+    position: relative;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+.neon-night-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #ff006e, #00ff00);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+}
+
+.neon-night-card {
+    padding: 2rem;
+    border: 1px solid #00ff00;
+    border-radius: 4px;
+    background: rgba(26, 10, 46, 0.5);
+    transition: all 0.4s ease;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    position: relative;
+}
+
+.neon-night-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #ff006e, #00ff00);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.neon-night-card:hover {
+    border-color: #ff006e;
+    box-shadow: 0 0 25px rgba(255, 0, 110, 0.4);
+    transform: scale(1.02);
+}
+
+.neon-night-card-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: #00ff00;
+    text-transform: uppercase;
+}
+
+.neon-night-card-title a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.neon-night-card-title a:hover {
+    color: #ff006e;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+}
+
+.neon-night-card-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+.neon-night-arrow-link {
+    color: #ff006e;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.neon-night-arrow-link:hover {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.neon-night-arrow-link i {
+    transition: transform 0.3s ease;
+}
+
+.neon-night-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+.neon-night-article {
+    max-width: 100%;
+}
+
+.neon-night-title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    color: #00ff00;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.neon-night-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #b0b0b0;
+    font-weight: 400;
+}
+
+.neon-night-meta {
+    font-size: 0.85rem;
+    color: #808080;
+}
+
+.neon-night-content {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #d0d0d0;
+}
+
+.neon-night-content h1,
+.neon-night-content h2,
+.neon-night-content h3 {
+    color: #00ff00;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+.neon-night-content h1 {
+    font-size: 2.2rem;
+    border-bottom: 1px solid #00ff00;
+    padding-bottom: 0.5rem;
+}
+
+.neon-night-content h2 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #ff006e;
+    padding-bottom: 0.5rem;
+}
+
+.neon-night-content h3 {
+    font-size: 1.3rem;
+}
+
+.neon-night-content p {
+    margin-bottom: 1.5rem;
+}
+
+.neon-night-content a {
+    color: #ff006e;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+.neon-night-content a:hover {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.neon-night-content blockquote {
+    border-left: 2px solid #00ff00;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #909090;
+}
+
+.neon-night-toc {
+    padding: 1.5rem;
+    border-left: 1px solid #00ff00;
+    background: rgba(0, 255, 0, 0.05);
+    border-radius: 4px;
+}
+
+.neon-night-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.neon-night-toc .toc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.neon-night-toc .toc-content a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.neon-night-toc .toc-content a:hover {
+    color: #00ff00;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+}
+
+.neon-night-footer {
+    background: rgba(10, 10, 10, 0.8);
+    border-top: 2px solid;
+    border-image: linear-gradient(90deg, #ff006e, #00ff00) 1;
+}
+
+.neon-night-link {
+    transition: all 0.3s ease;
+}
+
+.neon-night-link:hover {
+    color: #00ff00 !important;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+}
+
+.neon-night-modal-content {
+    background: rgba(26, 10, 46, 0.95);
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .neon-night-hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .neon-night-title {
+        font-size: 1.8rem;
+    }
+    
+    .neon-night-card {
+        padding: 1.5rem;
+    }
+    
+    .neon-night-section-title {
+        font-size: 1.6rem;
+    }
+}

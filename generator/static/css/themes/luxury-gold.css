@@ -1,0 +1,382 @@
+.luxury-gold-theme {
+    font-family: 'Georgia', 'Garamond', serif;
+    color: #2a2a2a;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.luxury-gold-navbar {
+    background: rgba(26, 26, 26, 0.95) !important;
+    border-bottom: 2px solid #ffd700;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
+}
+
+.luxury-gold-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffd700;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.luxury-gold-brand:hover {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.luxury-gold-nav-link {
+    color: #c0c0c0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem !important;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.luxury-gold-nav-link:hover {
+    color: #ffd700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.luxury-gold-icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid #ffd700;
+    color: #ffd700;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.luxury-gold-icon-btn:hover {
+    background: rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+}
+
+.luxury-gold-main {
+    min-height: calc(100vh - 300px);
+}
+
+.luxury-gold-hero {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(42, 42, 42, 0.9) 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #ffd700;
+}
+
+.luxury-gold-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.luxury-gold-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffd700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.luxury-gold-hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #c0c0c0;
+    font-weight: 400;
+}
+
+.luxury-gold-btn {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #1a1a1a;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding: 0.75rem 2.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.luxury-gold-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+    color: #1a1a1a;
+}
+
+.luxury-gold-btn-outline {
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    background: transparent;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding: 0.6rem 2.3rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.luxury-gold-btn-outline:hover {
+    background: rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.luxury-gold-section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffd700;
+    position: relative;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.luxury-gold-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.luxury-gold-card {
+    padding: 2rem;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 4px;
+    background: rgba(42, 42, 42, 0.5);
+    transition: all 0.4s ease;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.luxury-gold-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+}
+
+.luxury-gold-card:hover {
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+.luxury-gold-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: #ffd700;
+}
+
+.luxury-gold-card-title a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.luxury-gold-card-title a:hover {
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.luxury-gold-card-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #b0b0b0;
+}
+
+.luxury-gold-arrow-link {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.luxury-gold-arrow-link:hover {
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.luxury-gold-arrow-link i {
+    transition: transform 0.3s ease;
+}
+
+.luxury-gold-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+.luxury-gold-article {
+    max-width: 100%;
+}
+
+.luxury-gold-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    color: #ffd700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.luxury-gold-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #c0c0c0;
+    font-weight: 400;
+}
+
+.luxury-gold-meta {
+    font-size: 0.85rem;
+    color: #808080;
+}
+
+.luxury-gold-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #d0d0d0;
+}
+
+.luxury-gold-content h1,
+.luxury-gold-content h2,
+.luxury-gold-content h3 {
+    color: #ffd700;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.luxury-gold-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 0.5rem;
+}
+
+.luxury-gold-content h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid #ffd700;
+    padding-bottom: 0.5rem;
+}
+
+.luxury-gold-content h3 {
+    font-size: 1.5rem;
+}
+
+.luxury-gold-content p {
+    margin-bottom: 1.5rem;
+}
+
+.luxury-gold-content a {
+    color: #ffd700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.luxury-gold-content a:hover {
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.luxury-gold-content blockquote {
+    border-left: 3px solid #ffd700;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #a0a0a0;
+}
+
+.luxury-gold-toc {
+    padding: 1.5rem;
+    border-left: 2px solid #ffd700;
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.luxury-gold-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.luxury-gold-toc .toc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.luxury-gold-toc .toc-content a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.luxury-gold-toc .toc-content a:hover {
+    color: #ffd700;
+}
+
+.luxury-gold-footer {
+    background: rgba(26, 26, 26, 0.8);
+    border-top: 2px solid #ffd700;
+}
+
+.luxury-gold-link {
+    transition: all 0.3s ease;
+}
+
+.luxury-gold-link:hover {
+    color: #ffd700 !important;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.luxury-gold-modal-content {
+    background: rgba(42, 42, 42, 0.95);
+    border: 1px solid #ffd700;
+}
+
+@media (max-width: 768px) {
+    .luxury-gold-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .luxury-gold-title {
+        font-size: 2rem;
+    }
+    
+    .luxury-gold-card {
+        padding: 1.5rem;
+    }
+    
+    .luxury-gold-section-title {
+        font-size: 1.8rem;
+    }
+}

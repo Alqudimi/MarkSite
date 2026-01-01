@@ -1,0 +1,422 @@
+.serenity-theme {
+    font-family: 'Lora', Georgia, serif;
+    color: #5a5a5a;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    background: linear-gradient(135deg, #f5f3f0 0%, #faf8f6 100%);
+}
+
+.serenity-navbar {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(200, 190, 180, 0.2);
+}
+
+.serenity-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #8b7355;
+    transition: opacity 0.3s ease;
+}
+
+.serenity-brand:hover {
+    opacity: 0.8;
+}
+
+.serenity-nav-link {
+    color: #a89a8f;
+    font-size: 0.95rem;
+    font-weight: 400;
+    padding: 0.5rem 1.25rem !important;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.serenity-nav-link:hover {
+    color: #8b7355;
+}
+
+.serenity-icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(139, 115, 85, 0.08);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    color: #8b7355;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.serenity-icon-btn:hover {
+    background: rgba(139, 115, 85, 0.15);
+    border-color: rgba(139, 115, 85, 0.3);
+    color: #6b5344;
+}
+
+.serenity-main {
+    min-height: calc(100vh - 300px);
+}
+
+.serenity-hero {
+    background: linear-gradient(135deg, rgba(245, 243, 240, 0.8) 0%, rgba(250, 248, 246, 0.8) 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.serenity-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(200, 190, 180, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.serenity-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #5a5a5a;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.serenity-hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #a89a8f;
+    font-weight: 300;
+}
+
+.serenity-btn {
+    background: linear-gradient(135deg, #8b7355 0%, #a89a8f 100%);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 50px;
+    padding: 0.75rem 2.5rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.serenity-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 115, 85, 0.25);
+    color: white;
+}
+
+.serenity-btn-outline {
+    color: #8b7355;
+    border: 2px solid #8b7355;
+    background: transparent;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 50px;
+    padding: 0.6rem 2.3rem;
+    transition: all 0.3s ease;
+}
+
+.serenity-btn-outline:hover {
+    background: #8b7355;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.serenity-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #5a5a5a;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.serenity-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c8beb4, transparent);
+}
+
+.serenity-card {
+    padding: 2.5rem;
+    border: 1px solid rgba(200, 190, 180, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.serenity-card:hover {
+    border-color: rgba(139, 115, 85, 0.4);
+    box-shadow: 0 12px 32px rgba(139, 115, 85, 0.12);
+    transform: translateY(-6px);
+}
+
+.serenity-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 1rem;
+    color: #5a5a5a;
+}
+
+.serenity-card-title a {
+    color: #5a5a5a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.serenity-card-title a:hover {
+    color: #8b7355;
+}
+
+.serenity-card-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #a89a8f;
+}
+
+.serenity-arrow-link {
+    color: #8b7355;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.serenity-arrow-link:hover {
+    color: #6b5344;
+}
+
+.serenity-arrow-link i {
+    transition: transform 0.3s ease;
+}
+
+.serenity-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+.serenity-article {
+    max-width: 100%;
+}
+
+.serenity-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    color: #5a5a5a;
+    margin-bottom: 1.5rem;
+}
+
+.serenity-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #a89a8f;
+    font-weight: 300;
+}
+
+.serenity-meta {
+    font-size: 0.9rem;
+    color: #c8beb4;
+}
+
+.serenity-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #6b6b6b;
+}
+
+.serenity-content h1,
+.serenity-content h2,
+.serenity-content h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5a5a5a;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.serenity-content h1 {
+    font-size: 2.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.serenity-content h2 {
+    font-size: 2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.serenity-content h3 {
+    font-size: 1.5rem;
+}
+
+.serenity-content p {
+    margin-bottom: 1.5rem;
+}
+
+.serenity-content a {
+    color: #8b7355;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: opacity 0.3s ease;
+}
+
+.serenity-content a:hover {
+    opacity: 0.8;
+}
+
+.serenity-content blockquote {
+    border-left: 3px solid #c8beb4;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #a89a8f;
+}
+
+.serenity-toc {
+    padding: 1.5rem;
+    border-left: 2px solid rgba(200, 190, 180, 0.3);
+}
+
+.serenity-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.serenity-toc .toc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.serenity-toc .toc-content a {
+    color: #a89a8f;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.serenity-toc .toc-content a:hover {
+    color: #8b7355;
+}
+
+.serenity-footer {
+    background: linear-gradient(135deg, rgba(245, 243, 240, 0.8) 0%, rgba(250, 248, 246, 0.8) 100%);
+    border-top: 1px solid rgba(200, 190, 180, 0.2);
+}
+
+.serenity-link {
+    transition: opacity 0.3s ease;
+}
+
+.serenity-link:hover {
+    opacity: 0.8;
+}
+
+.serenity-modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(200, 190, 180, 0.2);
+}
+
+[data-bs-theme="dark"] .serenity-theme {
+    background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+    color: #d4d4d4;
+}
+
+[data-bs-theme="dark"] .serenity-navbar {
+    background: rgba(20, 20, 20, 0.85) !important;
+    border-bottom-color: rgba(139, 115, 85, 0.2);
+}
+
+[data-bs-theme="dark"] .serenity-brand,
+[data-bs-theme="dark"] .serenity-nav-link:hover,
+[data-bs-theme="dark"] .serenity-title,
+[data-bs-theme="dark"] .serenity-section-title,
+[data-bs-theme="dark"] .serenity-card-title a,
+[data-bs-theme="dark"] .serenity-arrow-link,
+[data-bs-theme="dark"] .serenity-content h1,
+[data-bs-theme="dark"] .serenity-content h2,
+[data-bs-theme="dark"] .serenity-content h3,
+[data-bs-theme="dark"] .serenity-content a {
+    color: #e8d5c4;
+}
+
+[data-bs-theme="dark"] .serenity-nav-link {
+    color: #b8a89d;
+}
+
+[data-bs-theme="dark"] .serenity-hero {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(34, 34, 34, 0.8) 100%);
+}
+
+[data-bs-theme="dark"] .serenity-card {
+    background: rgba(30, 30, 30, 0.6);
+    border-color: rgba(139, 115, 85, 0.2);
+}
+
+[data-bs-theme="dark"] .serenity-card:hover {
+    border-color: rgba(139, 115, 85, 0.4);
+}
+
+[data-bs-theme="dark"] .serenity-content {
+    color: #c4c4c4;
+}
+
+[data-bs-theme="dark"] .serenity-toc {
+    border-left-color: rgba(139, 115, 85, 0.2);
+}
+
+[data-bs-theme="dark"] .serenity-footer {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(34, 34, 34, 0.8) 100%);
+    border-top-color: rgba(139, 115, 85, 0.2);
+}
+
+[data-bs-theme="dark"] .serenity-modal-content {
+    background: rgba(30, 30, 30, 0.95);
+    border-color: rgba(139, 115, 85, 0.2);
+}
+
+@media (max-width: 768px) {
+    .serenity-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .serenity-title {
+        font-size: 2rem;
+    }
+    
+    .serenity-card {
+        padding: 1.5rem;
+    }
+    
+    .serenity-section-title {
+        font-size: 1.8rem;
+    }
+}

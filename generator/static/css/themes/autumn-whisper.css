@@ -1,0 +1,386 @@
+.autumn-whisper-theme {
+    font-family: 'Georgia', 'Garamond', serif;
+    color: #3a2a1a;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    background: linear-gradient(135deg, #faf5f0 0%, #f5ede5 100%);
+}
+
+.autumn-whisper-navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 2px solid #d97706;
+    box-shadow: 0 2px 8px rgba(217, 119, 6, 0.1);
+}
+
+.autumn-whisper-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #d4511e;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.autumn-whisper-brand:hover {
+    color: #d97706;
+}
+
+.autumn-whisper-nav-link {
+    color: #5a4a3a;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem !important;
+    transition: all 0.3s ease;
+}
+
+.autumn-whisper-nav-link:hover {
+    color: #d4511e;
+    background: rgba(217, 119, 6, 0.08);
+    border-radius: 4px;
+}
+
+.autumn-whisper-icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(217, 119, 6, 0.1);
+    border: 1px solid #d97706;
+    color: #d4511e;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.autumn-whisper-icon-btn:hover {
+    background: #d97706;
+    color: white;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.autumn-whisper-main {
+    min-height: calc(100vh - 300px);
+}
+
+.autumn-whisper-hero {
+    background: linear-gradient(135deg, rgba(250, 245, 240, 0.8) 0%, rgba(245, 237, 229, 0.8) 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #d97706;
+}
+
+.autumn-whisper-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.autumn-whisper-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #d4511e;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.autumn-whisper-hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #5a4a3a;
+    font-weight: 400;
+}
+
+.autumn-whisper-btn {
+    background: linear-gradient(135deg, #d4511e 0%, #d97706 100%);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    padding: 0.75rem 2.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.2);
+}
+
+.autumn-whisper-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
+    color: white;
+}
+
+.autumn-whisper-btn-outline {
+    color: #d4511e;
+    border: 2px solid #d4511e;
+    background: transparent;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    padding: 0.6rem 2.3rem;
+    transition: all 0.3s ease;
+}
+
+.autumn-whisper-btn-outline:hover {
+    background: #d4511e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.autumn-whisper-section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #d4511e;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.autumn-whisper-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4511e, #d97706, #f59e0b);
+}
+
+.autumn-whisper-card {
+    padding: 2rem;
+    border: 1px solid #e8d4c0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.4s ease;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(217, 119, 6, 0.08);
+}
+
+.autumn-whisper-card:hover {
+    border-color: #d97706;
+    box-shadow: 0 12px 32px rgba(217, 119, 6, 0.15);
+    transform: translateY(-4px);
+}
+
+.autumn-whisper-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-bottom: 1rem;
+    color: #d4511e;
+}
+
+.autumn-whisper-card-title a {
+    color: #d4511e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.autumn-whisper-card-title a:hover {
+    color: #d97706;
+}
+
+.autumn-whisper-card-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #5a4a3a;
+}
+
+.autumn-whisper-arrow-link {
+    color: #d4511e;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.autumn-whisper-arrow-link:hover {
+    color: #d97706;
+}
+
+.autumn-whisper-arrow-link i {
+    transition: transform 0.3s ease;
+}
+
+.autumn-whisper-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+.autumn-whisper-article {
+    max-width: 100%;
+}
+
+.autumn-whisper-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    color: #d4511e;
+    margin-bottom: 1.5rem;
+}
+
+.autumn-whisper-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #5a4a3a;
+    font-weight: 400;
+}
+
+.autumn-whisper-meta {
+    font-size: 0.9rem;
+    color: #999999;
+}
+
+.autumn-whisper-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #3a3a3a;
+}
+
+.autumn-whisper-content h1,
+.autumn-whisper-content h2,
+.autumn-whisper-content h3 {
+    color: #d4511e;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.autumn-whisper-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #d4511e;
+    padding-bottom: 0.5rem;
+}
+
+.autumn-whisper-content h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #d97706;
+    padding-bottom: 0.5rem;
+}
+
+.autumn-whisper-content h3 {
+    font-size: 1.5rem;
+}
+
+.autumn-whisper-content p {
+    margin-bottom: 1.5rem;
+}
+
+.autumn-whisper-content a {
+    color: #d4511e;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+}
+
+.autumn-whisper-content a:hover {
+    opacity: 0.8;
+}
+
+.autumn-whisper-content blockquote {
+    border-left: 3px solid #d97706;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #777777;
+}
+
+.autumn-whisper-toc {
+    padding: 1.5rem;
+    border-left: 2px solid #d97706;
+    background: rgba(217, 119, 6, 0.05);
+    border-radius: 6px;
+}
+
+.autumn-whisper-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.autumn-whisper-toc .toc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.autumn-whisper-toc .toc-content a {
+    color: #d4511e;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.autumn-whisper-toc .toc-content a:hover {
+    color: #d97706;
+}
+
+.autumn-whisper-footer {
+    background: rgba(250, 245, 240, 0.8);
+    border-top: 2px solid #d97706;
+}
+
+.autumn-whisper-link {
+    transition: opacity 0.3s ease;
+}
+
+.autumn-whisper-link:hover {
+    opacity: 0.8;
+}
+
+.autumn-whisper-modal-content {
+    background: white;
+    border: 1px solid #d97706;
+}
+
+[data-bs-theme="dark"] .autumn-whisper-theme {
+    background: linear-gradient(135deg, #1a1410 0%, #2a1f15 100%);
+    color: #d4c4b0;
+}
+
+[data-bs-theme="dark"] .autumn-whisper-navbar {
+    background: #1a1410 !important;
+    border-bottom-color: #d97706;
+}
+
+[data-bs-theme="dark"] .autumn-whisper-card {
+    background: #2a2015;
+    border-color: #d97706;
+}
+
+[data-bs-theme="dark"] .autumn-whisper-content {
+    color: #d0c0b0;
+}
+
+[data-bs-theme="dark"] .autumn-whisper-footer {
+    background: #1a1410;
+    border-top-color: #d97706;
+}
+
+@media (max-width: 768px) {
+    .autumn-whisper-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .autumn-whisper-title {
+        font-size: 2rem;
+    }
+    
+    .autumn-whisper-card {
+        padding: 1.5rem;
+    }
+    
+    .autumn-whisper-section-title {
+        font-size: 1.8rem;
+    }
+}

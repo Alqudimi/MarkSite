@@ -1,0 +1,442 @@
+.vibrant-grid-theme {
+    font-family: 'Poppins', sans-serif;
+    color: #2d2d2d;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+}
+
+.vibrant-grid-navbar {
+    background: white !important;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff, #fb5607) 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.vibrant-grid-brand {
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.vibrant-grid-brand:hover {
+    opacity: 0.8;
+}
+
+.vibrant-grid-nav-link {
+    color: #2d2d2d;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem !important;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    position: relative;
+}
+
+.vibrant-grid-nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff006e, #8338ec);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.vibrant-grid-nav-link:hover::before {
+    width: 80%;
+}
+
+.vibrant-grid-nav-link:hover {
+    color: #ff006e;
+}
+
+.vibrant-grid-icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.vibrant-grid-icon-btn:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 4px 12px rgba(255, 0, 110, 0.3);
+}
+
+.vibrant-grid-main {
+    min-height: calc(100vh - 300px);
+}
+
+.vibrant-grid-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff, #fb5607) 1;
+}
+
+.vibrant-grid-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 0, 110, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.vibrant-grid-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff, #fb5607);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.vibrant-grid-hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #666;
+    font-weight: 500;
+}
+
+.vibrant-grid-btn {
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    padding: 0.75rem 2.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 0, 110, 0.3);
+}
+
+.vibrant-grid-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 110, 0.4);
+    color: white;
+}
+
+.vibrant-grid-btn-outline {
+    color: #3a86ff;
+    border: 2px solid #3a86ff;
+    background: transparent;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    padding: 0.6rem 2.3rem;
+    transition: all 0.3s ease;
+}
+
+.vibrant-grid-btn-outline:hover {
+    background: #3a86ff;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(58, 134, 255, 0.3);
+}
+
+.vibrant-grid-section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.vibrant-grid-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff, #fb5607);
+}
+
+.vibrant-grid-card {
+    padding: 2rem;
+    border: 3px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.4s ease;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.vibrant-grid-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.vibrant-grid-card:hover::before {
+    transform: scaleX(1);
+}
+
+.vibrant-grid-card:hover {
+    border-color: #3a86ff;
+    box-shadow: 0 12px 32px rgba(58, 134, 255, 0.15);
+    transform: translateY(-6px);
+}
+
+.vibrant-grid-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 1rem;
+    color: #2d2d2d;
+}
+
+.vibrant-grid-card-title a {
+    color: #2d2d2d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.vibrant-grid-card-title a:hover {
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.vibrant-grid-card-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+.vibrant-grid-arrow-link {
+    color: #3a86ff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.vibrant-grid-arrow-link:hover {
+    color: #ff006e;
+}
+
+.vibrant-grid-arrow-link i {
+    transition: transform 0.3s ease;
+}
+
+.vibrant-grid-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+.vibrant-grid-article {
+    max-width: 100%;
+}
+
+.vibrant-grid-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+}
+
+.vibrant-grid-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    font-weight: 500;
+}
+
+.vibrant-grid-meta {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.vibrant-grid-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #444;
+}
+
+.vibrant-grid-content h1,
+.vibrant-grid-content h2,
+.vibrant-grid-content h3 {
+    color: #2d2d2d;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.vibrant-grid-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #ff006e, #8338ec) 1;
+    padding-bottom: 0.5rem;
+}
+
+.vibrant-grid-content h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #3a86ff;
+    padding-bottom: 0.5rem;
+}
+
+.vibrant-grid-content h3 {
+    font-size: 1.5rem;
+    color: #ff006e;
+}
+
+.vibrant-grid-content p {
+    margin-bottom: 1.5rem;
+}
+
+.vibrant-grid-content a {
+    color: #3a86ff;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.vibrant-grid-content a:hover {
+    color: #ff006e;
+}
+
+.vibrant-grid-content blockquote {
+    border-left: 4px solid;
+    border-image: linear-gradient(180deg, #ff006e, #8338ec) 1;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+.vibrant-grid-toc {
+    padding: 1.5rem;
+    border-left: 3px solid #3a86ff;
+    background: rgba(58, 134, 255, 0.05);
+    border-radius: 8px;
+}
+
+.vibrant-grid-toc .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.vibrant-grid-toc .toc-content li {
+    margin-bottom: 0.5rem;
+}
+
+.vibrant-grid-toc .toc-content a {
+    color: #3a86ff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.vibrant-grid-toc .toc-content a:hover {
+    color: #ff006e;
+    padding-left: 4px;
+}
+
+.vibrant-grid-footer {
+    background: white;
+    border-top: 3px solid;
+    border-image: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff, #fb5607) 1;
+}
+
+.vibrant-grid-link {
+    transition: all 0.3s ease;
+}
+
+.vibrant-grid-link:hover {
+    color: #ff006e !important;
+    font-weight: 600;
+}
+
+.vibrant-grid-modal-content {
+    background: white;
+    border: 2px solid #3a86ff;
+}
+
+[data-bs-theme="dark"] .vibrant-grid-theme {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .vibrant-grid-navbar {
+    background: #1a1a1a !important;
+}
+
+[data-bs-theme="dark"] .vibrant-grid-card {
+    background: #2d2d2d;
+    border-color: #444;
+}
+
+[data-bs-theme="dark"] .vibrant-grid-content {
+    color: #d0d0d0;
+}
+
+[data-bs-theme="dark"] .vibrant-grid-footer {
+    background: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    .vibrant-grid-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .vibrant-grid-title {
+        font-size: 2rem;
+    }
+    
+    .vibrant-grid-card {
+        padding: 1.5rem;
+    }
+    
+    .vibrant-grid-section-title {
+        font-size: 1.8rem;
+    }
+}
