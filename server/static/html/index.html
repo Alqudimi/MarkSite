@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم MarkSite</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>MarkSite</h1>
+                <p>لوحة التحكم</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-page="dashboard">
+                    <span class="icon">📊</span>
+                    <span>لوحة المعلومات</span>
+                </a>
+                <a href="#" class="nav-item" data-page="config">
+                    <span class="icon">⚙️</span>
+                    <span>الإعدادات</span>
+                </a>
+                <a href="#" class="nav-item" data-page="content">
+                    <span class="icon">📝</span>
+                    <span>المحتوى</span>
+                </a>
+                <a href="#" class="nav-item" data-page="build">
+                    <span class="icon">🔨</span>
+                    <span>البناء</span>
+                </a>
+                <a href="#" class="nav-item" data-page="preview">
+                    <span class="icon">👁️</span>
+                    <span>المعاينة</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h2 id="page-title">لوحة المعلومات</h2>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="refresh-btn">🔄 تحديث</button>
+                    <button class="btn btn-primary" id="build-btn">🔨 بناء الموقع</button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Dashboard Page -->
+                <div id="dashboard-page" class="page active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">📄</div>
+                            <div class="stat-info">
+                                <h3>ملفات المحتوى</h3>
+                                <p class="stat-value" id="stat-content">0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🌐</div>
+                            <div class="stat-info">
+                                <h3>صفحات الموقع</h3>
+                                <p class="stat-value" id="stat-pages">0</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🎨</div>
+                            <div class="stat-info">
+                                <h3>القالب الحالي</h3>
+                                <p class="stat-value" id="stat-template">-</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">✅</div>
+                            <div class="stat-info">
+                                <h3>حالة البناء</h3>
+                                <p class="stat-value" id="stat-status">غير مبني</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h3>الإجراءات السريعة</h3>
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" id="new-content-btn">➕ محتوى جديد</button>
+                            <button class="btn btn-secondary" id="build-quick-btn">🔨 بناء سريع</button>
+                            <button class="btn btn-secondary" id="preview-quick-btn">👁️ معاينة</button>
+                        </div>
+                    </div>
+
+                    <div class="recent-files">
+                        <h3>الملفات الأخيرة</h3>
+                        <ul id="recent-list" class="file-list">
+                            <li class="loading">جاري التحميل...</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Configuration Page -->
+                <div id="config-page" class="page">
+                    <form id="config-form" class="form">
+                        <div class="form-group">
+                            <label for="site-name">اسم الموقع</label>
+                            <input type="text" id="site-name" name="site_name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="site-description">وصف الموقع</label>
+                            <textarea id="site-description" name="site_description" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="site-url">عنوان URL</label>
+                            <input type="url" id="site-url" name="site_url" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="template">القالب</label>
+                            <select id="template" name="template" required>
+                                <option value="default">الافتراضي</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author-name">اسم المؤلف</label>
+                            <input type="text" id="author-name" name="author_name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author-email">بريد المؤلف</label>
+                            <input type="email" id="author-email" name="author_email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="primary-color">اللون الأساسي</label>
+                            <input type="color" id="primary-color" name="primary_color">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">💾 حفظ الإعدادات</button>
+                            <button type="reset" class="btn btn-secondary">↺ إعادة تعيين</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Content Page -->
+                <div id="content-page" class="page">
+                    <div class="content-header">
+                        <h3>إدارة المحتوى</h3>
+                        <div class="content-actions">
+                            <button class="btn btn-primary" id="new-file-btn">➕ ملف جديد</button>
+                            <button class="btn btn-secondary" id="upload-file-btn">📤 رفع ملف</button>
+                        </div>
+                    </div>
+
+                    <div id="file-list-container" class="file-list-container">
+                        <ul id="content-list" class="file-list">
+                            <li class="loading">جاري التحميل...</li>
+                        </ul>
+                    </div>
+
+                    <!-- File Editor Modal -->
+                    <div id="editor-modal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 id="editor-title">محرر المحتوى</h3>
+                                <button class="modal-close" id="close-editor">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <textarea id="file-editor" class="editor"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" id="cancel-editor">إلغاء</button>
+                                <button class="btn btn-primary" id="save-editor">💾 حفظ</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upload Modal -->
+                    <div id="upload-modal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>رفع ملف</h3>
+                                <button class="modal-close" id="close-upload">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="upload-area" id="upload-area">
+                                    <p>اسحب الملفات هنا أو انقر للاختيار</p>
+                                    <input type="file" id="file-input" accept=".md" style="display: none;">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" id="cancel-upload">إلغاء</button>
+                                <button class="btn btn-primary" id="confirm-upload" disabled>📤 رفع</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Page -->
+                <div id="build-page" class="page">
+                    <div class="build-section">
+                        <h3>بناء الموقع</h3>
+                        <p>اختر قالب وابدأ بناء موقعك الثابت</p>
+
+                        <div class="template-selector">
+                            <label for="build-template">اختر القالب:</label>
+                            <select id="build-template">
+                                <option value="">الافتراضي</option>
+                            </select>
+                        </div>
+
+                        <div class="build-actions">
+                            <button class="btn btn-primary btn-lg" id="start-build">🔨 ابدأ البناء</button>
+                        </div>
+
+                        <div id="build-log" class="build-log" style="display: none;">
+                            <h4>سجل البناء</h4>
+                            <pre id="log-content"></pre>
+                        </div>
+
+                        <div id="build-result" class="build-result" style="display: none;">
+                            <h4>نتائج البناء</h4>
+                            <div id="result-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview Page -->
+                <div id="preview-page" class="page">
+                    <div class="preview-section">
+                        <h3>معاينة الموقع</h3>
+                        <p>معاينة الموقع المبني</p>
+                        <button class="btn btn-primary" id="open-preview">👁️ فتح المعاينة في نافذة جديدة</button>
+                        <div id="preview-container" class="preview-container" style="display: none;">
+                            <iframe id="preview-frame" src="" title="معاينة الموقع"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
