@@ -1,301 +1,274 @@
-# MarkSite
+# MarkSite Dashboard
 
+لوحة تحكم شاملة لإدارة مشروع **MarkSite** - مولد المواقع الثابتة الحديث.
 
-<p align="center">
-  <a href="https://github.com/Alqudimi/MarkSite">
-    <img src="assets/images/logo.png" alt="Project Logo" width="450" height="450">
-  </a>
-</p>
+## 🎯 المميزات
 
-<h1 align="center">MarkSite</h1>
+- **واجهة رسومية سهلة الاستخدام**: لوحة تحكم حديثة بدون تعقيدات
+- **إدارة المحتوى**: إنشاء وتعديل وحذف ملفات Markdown بسهولة
+- **إدارة الإعدادات**: تخصيص اسم الموقع والقالب والألوان
+- **اختيار القوالب**: 24 قالب مختلف للاختيار من بينها
+- **بناء الموقع**: بناء الموقع الثابت بضغطة زر واحدة
+- **معاينة مباشرة**: معاينة الموقع المبني قبل النشر
+- **ملفات ثابتة فقط**: واجهة HTML/CSS/JS بدون أطر عمل ثقيلة
+- **API قوي**: API كامل يمكن استخدامه برمجياً
 
-<h3 align="center">Transform Markdown into Beautiful, Professional Websites</h3>
+## 📋 المتطلبات
 
-<p align="center">
-  A powerful, component-based static site generator built with Python. Transform Markdown files into beautiful, modern static websites with 14 professional templates and 8 interactive components.
-  <br />
-  <br />
-  <a href="https://github.com/Alqudimi/MarkSite/doc"><strong>Explore the Docs »</strong></a>
-  <br />
-  <br />
-  <a href="https://github.com/Alqudimi/MarkSite/demo">View Demo</a>
-  ·
-  <a href="https://github.com/Alqudimi/MarkSite/issues">Report Bug</a>
-  ·
-  <a href="https://github.com/Alqudimi/MarkSite/issues">Request Feature</a>
-</p>
+- Python 3.7+
+- pip (مدير الحزم)
 
-<p align="center">
-  <a href="https://github.com/Alqudimi/MarkSite/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
-  </a>
-  <a href="https://github.com/Alqudimi/MarkSite/releases">
-    <img src="https://img.shields.io/badge/version-1.0.0-green.svg" alt="Version">
-  </a>
-  <a href="https://github.com/Alqudimi/MarkSite/stargazers">
-    <img src="https://img.shields.io/github/stars/Alqudimi/MarkSite.svg?style=social&label=Stars" alt="Stars">
-  </a>
-  <a href="https://github.com/Alqudimi/MarkSite/forks">
-    <img src="https://img.shields.io/github/forks/Alqudimi/MarkSite.svg?style=social&label=Forks" alt="Forks">
-  </a>
-  <a href="https://github.com/Alqudimi/MarkSite/issues">
-    <img src="https://img.shields.io/github/issues/Alqudimi/MarkSite.svg" alt="Issues">
-  </a>
-</p>
-<div align="center">
+## 🚀 البدء السريع
 
-![MarkSite Logo](https://img.shields.io/badge/MarkSite-Static%20Site%20Generator-blue)
-![Python](https://img.shields.io/badge/Python-3.11%2B-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-
-
-</div>
----
-
-## Overview
-
-MarkSite is a high-performance static site generator that converts Markdown content into stunning, production-ready websites. Built with Python, Flask, and Jinja2, it offers a powerful component system, 14 professional templates, and advanced features for developers and content creators.
-
-## Features
-
-### 🚀 Core Features
-- **Recursive Markdown Processing** - Automatically scans and processes all `.md` files in nested directories
-- **Advanced Markdown Rendering** - Full CommonMark support with syntax highlighting via Pygments
-- **Automatic TOC Generation** - Table of contents generated from headings
-- **Static Export** - Complete static HTML/CSS/JS output ready for any hosting platform
-- **SEO Optimized** - Automatic sitemap.xml generation and meta tags
-- **Full-Text Search** - Client-side search powered by Lunr.js
-
-### 🎨 Component System
-- **8 Built-in Components** - Button, Card, Alert, Code Sample, Hero, Tabs, Collapsible, Badge
-- **Shortcode Syntax** - Easy `{{< component param="value" />}}` syntax in Markdown
-- **Theme-Aware** - Components automatically adapt to site theme
-- **Accessible** - ARIA attributes and semantic HTML throughout
-- **Pattern Library** - Auto-generated documentation with live examples
-
-### 🎭 Professional Templates
-- **14 Beautiful Templates** - From minimalist blogs to corporate portfolios
-- **Bootstrap 5** - Responsive, mobile-first design
-- **Light/Dark Mode** - User-selectable theme with persistent preference
-- **Custom Styling** - Easily customizable colors and branding
-- **Smooth Animations** - Professional transitions and effects
-
-### ⚡ Performance
-- **Fast Builds** - Processes hundreds of pages in seconds
-- **Optimized Output** - Clean, minified CSS and deferred JS loading
-- **CDN Ready** - All assets are static and cacheable
-- **Lighthouse Score** - 95+ on all metrics
-
-## Quick Start
-
-### Prerequisites
-- Python 3.11 or higher
-- pip package manager
-
-### Installation
+### 1. تثبيت المتطلبات
 
 ```bash
-# Clone the repository
-git clone https://github.com/Alqudimi/MarkSite.git
-cd MarkSite
-
-# Install dependencies
-pip install -r requirements.txt
+pip install -r server/requirements.txt
 ```
 
-### Build Your First Site
+### 2. تشغيل الخادم
+
+**الطريقة الأولى (باستخدام السكريبت):**
+```bash
+./run_server.sh
+```
+
+**الطريقة الثانية (مباشرة):**
+```bash
+python3 server/app.py
+```
+
+### 3. الوصول إلى لوحة التحكم
+
+افتح متصفحك وانتقل إلى:
+```
+http://localhost:8000
+```
+
+## 📁 هيكل المشروع
+
+```
+marksite-dashboard/
+├── MarkSite/                    # مشروع MarkSite الأصلي
+│   ├── content/                 # مجلد المحتوى (ملفات Markdown)
+│   ├── site/                    # مجلد الإخراج (الموقع المبني)
+│   ├── generator/               # محرك المولد
+│   ├── config.yaml              # إعدادات الموقع
+│   └── build.py                 # سكريبت البناء
+├── server/
+│   ├── app.py                   # تطبيق FastAPI الرئيسي
+│   ├── requirements.txt          # المتطلبات
+│   └── static/
+│       ├── html/
+│       │   └── index.html        # الواجهة الرئيسية
+│       ├── css/
+│       │   └── style.css         # الأنماط
+│       └── js/
+│           └── app.js            # منطق التطبيق
+├── run_server.sh                # سكريبت التشغيل
+└── README.md                    # هذا الملف
+```
+
+## 🎨 واجهة لوحة التحكم
+
+### الصفحات المتاحة
+
+1. **لوحة المعلومات** 📊
+   - عرض إحصائيات المشروع
+   - الملفات الأخيرة
+   - الإجراءات السريعة
+
+2. **الإعدادات** ⚙️
+   - تعديل اسم الموقع
+   - تعديل وصف الموقع
+   - اختيار القالب
+   - تعديل معلومات المؤلف
+   - تخصيص الألوان
+
+3. **إدارة المحتوى** 📝
+   - عرض جميع ملفات Markdown
+   - إنشاء ملفات جديدة
+   - تعديل الملفات الموجودة
+   - حذف الملفات
+   - رفع ملفات جديدة
+
+4. **بناء الموقع** 🔨
+   - اختيار القالب
+   - بدء عملية البناء
+   - عرض سجل البناء
+   - عرض نتائج البناء
+
+5. **معاينة الموقع** 👁️
+   - معاينة الموقع المبني
+   - فتح المعاينة في نافذة جديدة
+
+## 🔌 API Endpoints
+
+### الإعدادات
+
+```
+GET  /api/config              # الحصول على الإعدادات
+POST /api/config              # تحديث الإعدادات
+GET  /api/templates           # قائمة القوالب المتاحة
+```
+
+### المحتوى
+
+```
+GET    /api/content                    # قائمة الملفات
+GET    /api/content/{file_path}        # الحصول على محتوى ملف
+POST   /api/content/{file_path}        # حفظ ملف
+POST   /api/content/upload             # رفع ملف
+DELETE /api/content/{file_path}        # حذف ملف
+```
+
+### البناء
+
+```
+POST /api/build                # بناء الموقع
+GET  /api/build/status         # حالة البناء
+GET  /api/build/preview        # معاينة الموقع
+```
+
+### الملفات والإحصائيات
+
+```
+GET /api/files                 # قائمة الملفات
+GET /api/stats                 # إحصائيات المشروع
+GET /api/health                # فحص صحة الخادم
+```
+
+## 📝 أمثلة الاستخدام
+
+### الحصول على الإعدادات
 
 ```bash
-# Basic build (uses content/ as input, outputs to site/)
-python build.py
-
-# Build with a specific template
-python build.py --template minimalist
-
-# Custom configuration
-python build.py --config myconfig.yaml
+curl http://localhost:8000/api/config
 ```
 
-### View Your Site
+### تحديث الإعدادات
 
 ```bash
-# Serve locally
-python -m http.server -d site 8000
-
-# Visit http://localhost:8000
+curl -X POST http://localhost:8000/api/config \
+  -H "Content-Type: application/json" \
+  -d '{
+    "site_name": "موقعي الجديد",
+    "site_description": "وصف الموقع",
+    "template": "minimalist"
+  }'
 ```
 
-## Templates
+### إنشاء ملف جديد
 
-Choose from 14 professionally designed templates:
-
-| Template | Description | Best For |
-|----------|-------------|----------|
-| **Default** | Classic, professional Bootstrap design | Business sites, general purpose |
-| **Minimalist** | Clean, spacious with elegant typography | Personal blogs, portfolios |
-| **Tech Blog** | Dark theme with neon accents | Technology blogs, developer sites |
-| **Documentation** | Professional documentation style | Technical docs, API references |
-| **Portfolio** | Showcase design with bold typography | Creative portfolios, photography |
-| **Magazine** | Modern editorial with bold layouts | News sites, content publishers |
-| **Landing** | Conversion-focused with gradients | Product pages, SaaS sites |
-| **Creative** | Bold, artistic with dramatic styling | Agencies, creative studios |
-| **Personal Blog** | Warm, cozy with serif typography | Personal writing, storytelling |
-| **Inkwell** | Literary magazine aesthetic | Authors, literary journals |
-| **Futuristic** | Sci-fi inspired modern design | Tech startups, innovation sites |
-| **Monochrome** | Elegant black and white | Photography, minimal portfolios |
-| **Oasis** | Nature-inspired calming design | Wellness, lifestyle blogs |
-| **Retrowave** | 80s-inspired neon aesthetics | Gaming, retro tech, music |
-
-All templates include:
-- Responsive layouts optimized for their purpose
-- Full component support
-- Light and dark mode variants
-- Mobile-first responsive design
-- Unique color schemes and typography
-
-## Components
-
-### Available Components
-
-- **Button** - Call-to-action buttons with multiple variants and sizes
-- **Card** - Content cards with headers, footers, and images
-- **Alert** - Notification messages with icons and dismissible options
-- **Code Sample** - Syntax-highlighted code blocks with copy functionality
-- **Hero** - Large hero sections with backgrounds and CTAs
-- **Tabs** - Tabbed content organization
-- **Collapsible** - Accordion-style expandable sections
-- **Badge** - Labels and tags for highlighting content
-
-### Example Usage
-
-```markdown
-{{< button text="Get Started" variant="primary" href="/docs/" />}}
-{{< card title="Welcome" content="Start building amazing sites!" />}}
-{{< alert content="Important update!" variant="info" icon="bi bi-info-circle" />}}
-{{< code language="python" content="print('Hello, MarkSite!')" />}}
+```bash
+curl -X POST http://localhost:8000/api/content/my-post.md \
+  -F "content=# عنوان المقالة\n\nمحتوى المقالة"
 ```
 
-See [Component Documentation](doc/COMPONENTS.md) for complete usage guide.
+### بناء الموقع
 
-## Project Structure
-
-```
-MarkSite/
-├── content/              # Your Markdown content files (input)
-│   ├── index.md
-│   ├── example/
-│   └── docs/
-├── generator/
-│   ├── generator.py      # Main generator engine
-│   ├── shortcode_parser.py  # Component parser
-│   ├── templates/        # Jinja2 page templates (14 themes)
-│   ├── components/       # Component templates
-│   └── static/           # CSS and JavaScript
-├── site/                 # Generated static site (output)
-├── doc/                  # Documentation
-├── build.py              # CLI build tool
-├── config.yaml           # Site configuration
-└── requirements.txt      # Python dependencies
+```bash
+curl -X POST http://localhost:8000/api/build
 ```
 
-## Documentation
+### الحصول على الإحصائيات
 
-- [Getting Started Guide](doc/GETTING_STARTED.md) - Complete setup and usage guide
-- [Component Guide](doc/COMPONENTS.md) - Detailed component documentation
-- [Template Guide](doc/TEMPLATES.md) - All templates with examples
-- [Deployment Guide](doc/DEPLOYMENT.md) - Deploy to GitHub Pages, Netlify, Vercel
-- [Configuration Guide](doc/CONFIGURATION.md) - Customize your site
-- [Custom Components](doc/CUSTOM_COMPONENTS.md) - Create your own components
-
-## Configuration
-
-Customize your site in `config.yaml`:
-
-```yaml
-site_name: "My Awesome Site"
-site_description: "Built with MarkSite"
-site_url: "https://example.com"
-template: "minimalist"
-
-theme:
-  default_mode: "light"
-  primary_color: "#0d6efd"
-
-author:
-  name: "Your Name"
-  email: "your@email.com"
-
-navigation:
-  - title: "Home"
-    url: "/"
-  - title: "Blog"
-    url: "/blog/"
+```bash
+curl http://localhost:8000/api/stats
 ```
 
-## Deployment
+## 🎨 القوالب المتاحة
 
-Deploy your site to any static hosting platform:
+يتوفر 24 قالب جميل للاختيار من بينها:
 
-- **GitHub Pages** - Free hosting for GitHub repositories
-- **Netlify** - Automatic builds and deployments
-- **Vercel** - Edge network with instant deployments
-- **Any Static Host** - Upload the `site/` directory
+- default (الافتراضي)
+- minimalist (بسيط)
+- techblog (مدونة تقنية)
+- documentation (توثيق)
+- portfolio (محفظة)
+- magazine (مجلة)
+- landing (صفحة هبوط)
+- creative (إبداعي)
+- personalblog (مدونة شخصية)
+- inkwell (حبر)
+- futuristic (مستقبلي)
+- monochrome (أحادي اللون)
+- oasis (واحة)
+- retrowave (موجة الثمانينات)
+- serenity (هدوء)
+- dark-nebula (سديم مظلم)
+- vibrant-grid (شبكة نابضة)
+- eco-green (أخضر بيئي)
+- luxury-gold (ذهب فاخر)
+- cyberpunk (سايبربانك)
+- brutalist (بروتالي)
+- oceanic (محيطي)
+- autumn-whisper (همسة الخريف)
+- neon-night (ليل نيون)
 
-See [Deployment Guide](doc/DEPLOYMENT.md) for detailed instructions.
+## 🛠️ التطوير والتخصيص
 
-## Browser Support
+### تعديل الواجهة
 
-- Chrome/Edge (latest 2 versions)
-- Firefox (latest 2 versions)
-- Safari (latest 2 versions)
-- Mobile browsers (iOS Safari, Chrome Android)
+الملفات الثابتة موجودة في:
+- `server/static/html/index.html` - الهيكل
+- `server/static/css/style.css` - الأنماط
+- `server/static/js/app.js` - المنطق
 
-## Accessibility
+### إضافة Endpoints جديدة
 
-- Semantic HTML throughout
-- ARIA labels and roles
-- Keyboard navigation support
-- Screen reader compatible
-- WCAG 2.1 AA compliant
+عدّل `server/app.py` وأضف الـ endpoints الجديدة:
 
-## Contributing
+```python
+@app.get("/api/custom")
+async def custom_endpoint():
+    return JSONResponse({"success": True, "data": "..."})
+```
 
-Contributions are welcome! To contribute:
+### تعديل القوالب
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+القوالب موجودة في `MarkSite/generator/templates/`
 
-## License
+## 🐛 استكشاف الأخطاء
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### الخادم لا يبدأ
 
-## Author
+تأكد من:
+1. تثبيت جميع المتطلبات: `pip install -r server/requirements.txt`
+2. عدم استخدام المنفذ 8000 من قبل تطبيق آخر
+3. وجود صلاحيات الكتابة في المجلد
 
-**Abdulaziz Al-Qadimi**
-- Email: eng7mi@gmail.com
-- GitHub: [@Alqudimi](https://github.com/Alqudimi)
-- Project Repository: [MarkSite](https://github.com/Alqudimi/MarkSite)
+### الملفات لا تُحفظ
 
-## Acknowledgments
+تأكد من:
+1. وجود صلاحيات الكتابة في مجلد `MarkSite/content/`
+2. اسم الملف صحيح وينتهي بـ `.md`
 
-Built with:
-- Python 3.11+
-- Flask & Jinja2
-- Bootstrap 5
-- Pygments (syntax highlighting)
-- Lunr.js (search)
-- Markdown (python-markdown)
+### البناء يفشل
+
+تأكد من:
+1. وجود ملفات Markdown في مجلد `MarkSite/content/`
+2. صيغة الملفات صحيحة (YAML frontmatter)
+3. القالب المختار موجود
+
+## 📚 الموارد الإضافية
+
+- [MarkSite GitHub](https://github.com/Alqudimi/MarkSite)
+- [Markdown Guide](https://www.markdownguide.org/)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+
+## 📄 الترخيص
+
+هذا المشروع مرخص تحت MIT License
+
+## 🤝 المساهمة
+
+نرحب بالمساهمات! يرجى فتح issue أو pull request
+
+## 📞 الدعم
+
+للمساعدة والدعم، يرجى فتح issue على GitHub
 
 ---
 
-<div align="center">
-
-**[⭐ Star this repository](https://github.com/Alqudimi/MarkSite) if you find it helpful!**
-
-Made with ❤️ by Abdulaziz Al-Qadimi
-
-</div>
+**تم إنشاؤه بـ ❤️ لتسهيل إدارة المواقع الثابتة**
