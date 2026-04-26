@@ -87,17 +87,18 @@ class StaticSiteGenerator:
             return f'generator/templates/{template}'
     
     def get_default_config(self):
-        return {
-            'site_name': 'My Static Site',
-            'site_description': 'A modern static site built with Flask',
-            'site_url': 'https://example.com',
-            'template': 'default',
-            'theme': {
-                'default_mode': 'light',
-                'primary_color': '#0d6efd',
-                'secondary_color': '#6c757d'
+            return {
+                'site_name': 'My Static Site',
+                'site_description': 'A modern static site built with Flask',
+                'site_url': 'https://example.com',
+                'template': 'default',
+                'theme': {
+                    'default_mode': 'light',
+                    'primary_color': '#0d6efd',
+                    'secondary_color': '#6c757d'
+                },
+                'search_index_content_length': 500 # Default search index content length
             }
-        }
     
     def scan_markdown_files(self):
         md_files = []
@@ -213,11 +214,12 @@ class StaticSiteGenerator:
         for page in self.pages:
             soup = BeautifulSoup(page['content'], 'html.parser')
             text_content = soup.get_text()
+            search_index_content_length = self.config.get('search_index_content_length', 500) # Default to 500 if not configured
             
             search_data.append({
                 'title': page['metadata']['title'],
                 'url': page['url'],
-                'content': text_content[:500],
+                'content': text_content[:search_index_content_length],
                 'description': page['metadata'].get('description', '')
             })
         
