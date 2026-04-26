@@ -244,6 +244,54 @@ class StaticSiteGenerator:
         sitemap_path = self.output_dir / 'sitemap.xml'
         with open(sitemap_path, 'w', encoding='utf-8') as f:
             f.write('\n'.join(sitemap_lines))
+
+    def generate_rss_feed(self):
+        """Generate RSS 2.0 feed for the site"""
+        base_url = self.config.get('site_url', 'https://example.com').rstrip('/')
+        site_name = self.config.get('site_name', 'My Static Site')
+        site_description = self.config.get('site_description', 'A modern static site')
+        
+        rss_lines = ['<?xml version="1.0" encoding="UTF-8" ?>']
+        rss_lines.append('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">')
+        rss_lines.append('<channel>')
+        rss_lines.append(f'  <title>{site_name}</title>')
+        rss_lines.append(f'  <link>{base_url}</link>')
+        rss_lines.append(f'  <description>{site_description}</description>')
+        rss_lines.append(f'  <language>en-us</language>')
+        rss_lines.append(f'  <lastBuildDate>{datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}</lastBuildDate>')
+        rss_lines.append(f'  <atom:link href="{base_url}/rss.xml" rel="self" type="application/rss+xml" />')
+        
+        # Sort pages by date for the feed
+        sorted_pages = sorted(
+            self.pages,
+            key=lambda x: x['metadata'].get('date', ''),
+            reverse=True
+        )
+        
+        # Only include the latest 20 items in RSS
+        for page in sorted_pages[:20]:
+            # Skip pages without a date or index page if desired, but usually all content is fine
+            pub_date = page['metadata'].get('date', datetime.now().strftime('%Y-%m-%d'))
+            try:
+                dt = datetime.strptime(pub_date, '%Y-%m-%d')
+                formatted_date = dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
+            except:
+                formatted_date = datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")
+                
+            rss_lines.append('  <item>')
+            rss_lines.append(f'    <title>{page["metadata"].get("title", "Untitled")}</title>')
+            rss_lines.append(f'    <link>{base_url}{page["url"]}</link>')
+            rss_lines.append(f'    <guid isPermaLink="true">{base_url}{page["url"]}</guid>')
+            rss_lines.append(f'    <pubDate>{formatted_date}</pubDate>')
+            rss_lines.append(f'    <description><![CDATA[{page["metadata"].get("description", "")}]]></description>')
+            rss_lines.append('  </item>')
+            
+        rss_lines.append('</channel>')
+        rss_lines.append('</rss>')
+        
+        rss_path = self.output_dir / 'rss.xml'
+        with open(rss_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(rss_lines))
     
     def copy_static_files(self):
         import shutil
@@ -300,6 +348,9 @@ class StaticSiteGenerator:
         
         print("Generating sitemap...")
         self.generate_sitemap()
+        
+        print("Generating RSS feed...")
+        self.generate_rss_feed()
         
         print(f"\n✓ Site generated successfully in {self.output_dir}/")
         print(f"  Total pages: {len(self.pages)}")
