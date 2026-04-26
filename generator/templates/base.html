@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/pygments.css">
     <link rel="stylesheet" href="/static/css/animations.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site_name }}" href="/rss.xml">
     
     {% block extra_head %}{% endblock %}
 </head>
@@ -63,6 +64,7 @@
                         <a href="{{ link.url }}" class="text-white me-3">{{ link.title }}</a>
                         {% endfor %}
                     {% endif %}
+                    <a href="/rss.xml" class="text-white me-3"><i class="bi bi-rss-fill"></i> RSS</a>
                 </div>
             </div>
         </div>
