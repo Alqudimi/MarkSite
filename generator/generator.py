@@ -276,13 +276,22 @@ class StaticSiteGenerator:
         # We'll use sequential processing for now to avoid pickling issues in this environment
         # while keeping the logic ready for parallelization
         pages_data = []
+        failed_files = []
         for md_file in md_files:
-            pages_data.append(self.process_file(md_file))
-        
-        for page_data in pages_data:
-            if page_data:
-                self.pages.append(page_data)
-        
+            page_data = self.process_file(md_file)
+            if page_data is None:
+                failed_files.append(md_file)
+            else:
+                pages_data.append(page_data)
+
+        if failed_files:
+            failed_paths = ", ".join(str(path) for path in failed_files)
+            raise RuntimeError(
+                f"Failed to process {len(failed_files)} Markdown file(s): {failed_paths}"
+            )
+
+        self.pages.extend(pages_data)
+
         print("Generating index page...")
         self.generate_index_page()
         
